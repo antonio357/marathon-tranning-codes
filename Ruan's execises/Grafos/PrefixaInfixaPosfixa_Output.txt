@@ -1,0 +1,334 @@
+
+at input()
+quantVer = 3
+prOrd = xYz
+inOrd = Yxz
+checking if tree was correctly initialized ...
+at printTree()
+mainRoot = x
+prOrd = xYz
+inOrd = Yxz
+
+The map vertices is : 
+	KEY	ELEMENT
+	Y	:	:	:
+	x	:	:	:
+	z	:	:	:
+
+
+at buildTree
+processing all vertex
+i = 0
+tempRoot = x
+possiDesc = Y
+
+at whichSide(root = x, desc = Y, forRoots = 0
+side = 1
+
+at whichSide(root = x, desc = z, forRoots = 0
+side = 2
+checking if Tree has chaged acording to the return of side
+
+at printTree()
+mainRoot = x
+prOrd = xYz
+inOrd = Yxz
+
+The map vertices is : 
+	KEY	ELEMENT
+	Y	x	:	:
+	x	:	Y	z
+	z	x	:	:
+
+i = 1
+tempRoot = Y
+possiDesc = z
+
+at whichSide(root = Y, desc = z, forRoots = 0
+side = -1
+checking if Tree has chaged acording to the return of side
+
+at printTree()
+mainRoot = x
+prOrd = xYz
+inOrd = Yxz
+
+The map vertices is : 
+	KEY	ELEMENT
+	Y	x	:	:
+	x	:	Y	z
+	z	x	:	:
+
+rootsRemanningPr = x
+rootsRemanningIn = x
+
+at printTree()
+mainRoot = x
+prOrd = xYz
+inOrd = Yxz
+
+The map vertices is : 
+	KEY	ELEMENT
+	Y	x	:	:
+	x	:	Y	z
+	z	x	:	:
+
+Yzx
+
+at input()
+quantVer = 3
+prOrd = abc
+inOrd = cba
+checking if tree was correctly initialized ...
+at printTree()
+mainRoot = a
+prOrd = abc
+inOrd = cba
+
+The map vertices is : 
+	KEY	ELEMENT
+	a	:	:	:
+	b	:	:	:
+	c	:	:	:
+
+
+at buildTree
+processing all vertex
+i = 0
+tempRoot = a
+possiDesc = b
+
+at whichSide(root = a, desc = b, forRoots = 0
+side = 1
+
+at whichSide(root = a, desc = c, forRoots = 0
+side = -1
+checking if Tree has chaged acording to the return of side
+
+at printTree()
+mainRoot = a
+prOrd = abc
+inOrd = cba
+
+The map vertices is : 
+	KEY	ELEMENT
+	a	:	b	:
+	b	a	:	:
+	c	:	:	:
+
+i = 1
+tempRoot = b
+possiDesc = c
+
+at whichSide(root = b, desc = c, forRoots = 0
+side = 1
+checking if Tree has chaged acording to the return of side
+
+at printTree()
+mainRoot = a
+prOrd = abc
+inOrd = cba
+
+The map vertices is : 
+	KEY	ELEMENT
+	a	:	b	:
+	b	a	c	:
+	c	b	:	:
+
+rootsRemanningPr = a
+rootsRemanningIn = a
+
+at printTree()
+mainRoot = a
+prOrd = abc
+inOrd = cba
+
+The map vertices is : 
+	KEY	ELEMENT
+	a	:	b	:
+	b	a	c	:
+	c	b	:	:
+
+cba
+
+at input()
+quantVer = 6
+prOrd = ABCDEF
+inOrd = CBAEDF
+checking if tree was correctly initialized ...
+at printTree()
+mainRoot = A
+prOrd = ABCDEF
+inOrd = CBAEDF
+
+The map vertices is : 
+	KEY	ELEMENT
+	A	:	:	:
+	B	:	:	:
+	C	:	:	:
+	D	:	:	:
+	E	:	:	:
+	F	:	:	:
+
+
+at buildTree
+processing all vertex
+i = 0
+tempRoot = A
+possiDesc = B
+
+at whichSide(root = A, desc = B, forRoots = 0
+side = 1
+
+at whichSide(root = A, desc = C, forRoots = 0
+side = -1
+checking if Tree has chaged acording to the return of side
+
+at printTree()
+mainRoot = A
+prOrd = ABCDEF
+inOrd = CBAEDF
+
+The map vertices is : 
+	KEY	ELEMENT
+	A	:	B	:
+	B	A	:	:
+	C	:	:	:
+	D	:	:	:
+	E	:	:	:
+	F	:	:	:
+
+i = 1
+tempRoot = B
+possiDesc = C
+
+at whichSide(root = B, desc = C, forRoots = 0
+side = 1
+
+at whichSide(root = B, desc = D, forRoots = 0
+side = -1
+checking if Tree has chaged acording to the return of side
+
+at printTree()
+mainRoot = A
+prOrd = ABCDEF
+inOrd = CBAEDF
+
+The map vertices is : 
+	KEY	ELEMENT
+	A	:	B	:
+	B	A	C	:
+	C	B	:	:
+	D	:	:	:
+	E	:	:	:
+	F	:	:	:
+
+i = 2
+tempRoot = C
+possiDesc = D
+
+at whichSide(root = C, desc = D, forRoots = 0
+side = -1
+
+at whichSide(root = C, desc = E, forRoots = 0
+side = -1
+checking if Tree has chaged acording to the return of side
+
+at printTree()
+mainRoot = A
+prOrd = ABCDEF
+inOrd = CBAEDF
+
+The map vertices is : 
+	KEY	ELEMENT
+	A	:	B	:
+	B	A	C	:
+	C	B	:	:
+	D	:	:	:
+	E	:	:	:
+	F	:	:	:
+
+i = 3
+tempRoot = D
+possiDesc = E
+
+at whichSide(root = D, desc = E, forRoots = 0
+side = 1
+
+at whichSide(root = D, desc = F, forRoots = 0
+side = 2
+checking if Tree has chaged acording to the return of side
+
+at printTree()
+mainRoot = A
+prOrd = ABCDEF
+inOrd = CBAEDF
+
+The map vertices is : 
+	KEY	ELEMENT
+	A	:	B	:
+	B	A	C	:
+	C	B	:	:
+	D	:	E	F
+	E	D	:	:
+	F	D	:	:
+
+i = 4
+tempRoot = E
+possiDesc = F
+
+at whichSide(root = E, desc = F, forRoots = 0
+side = -1
+checking if Tree has chaged acording to the return of side
+
+at printTree()
+mainRoot = A
+prOrd = ABCDEF
+inOrd = CBAEDF
+
+The map vertices is : 
+	KEY	ELEMENT
+	A	:	B	:
+	B	A	C	:
+	C	B	:	:
+	D	:	E	F
+	E	D	:	:
+	F	D	:	:
+
+rootsRemanningPr = AD
+rootsRemanningIn = AD
+
+at whichSide(root = A, desc = D, forRoots = 1
+side = 2
+checking if Tree has chaged acording to the return of side
+
+at printTree()
+mainRoot = A
+prOrd = ABCDEF
+inOrd = CBAEDF
+
+The map vertices is : 
+	KEY	ELEMENT
+	A	:	B	D
+	B	A	C	:
+	C	B	:	:
+	D	A	E	F
+	E	D	:	:
+	F	D	:	:
+
+
+at printTree()
+mainRoot = A
+prOrd = ABCDEF
+inOrd = CBAEDF
+
+The map vertices is : 
+	KEY	ELEMENT
+	A	:	B	D
+	B	A	C	:
+	C	B	:	:
+	D	A	E	F
+	E	D	:	:
+	F	D	:	:
+
+CBEFDA
