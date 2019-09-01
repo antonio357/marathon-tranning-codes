@@ -56,47 +56,32 @@ include CMakeFiles/MapaDoMeistre.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/MapaDoMeistre.dir/flags.make
 
-CMakeFiles/MapaDoMeistre.dir/MapaDoMeistre.cpp.obj: CMakeFiles/MapaDoMeistre.dir/flags.make
-CMakeFiles/MapaDoMeistre.dir/MapaDoMeistre.cpp.obj: ../MapaDoMeistre.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MapaDoMeistre.dir/MapaDoMeistre.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\MapaDoMeistre.dir\MapaDoMeistre.cpp.obj -c C:\Users\carlo\Desktop\MarathonTranningCodes\MapaDoMeistre.cpp
+CMakeFiles/MapaDoMeistre.dir/RuanContest/Grafos/MapaDoMeistre.cpp.obj: CMakeFiles/MapaDoMeistre.dir/flags.make
+CMakeFiles/MapaDoMeistre.dir/RuanContest/Grafos/MapaDoMeistre.cpp.obj: ../RuanContest/Grafos/MapaDoMeistre.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MapaDoMeistre.dir/RuanContest/Grafos/MapaDoMeistre.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\MapaDoMeistre.dir\RuanContest\Grafos\MapaDoMeistre.cpp.obj -c C:\Users\carlo\Desktop\MarathonTranningCodes\RuanContest\Grafos\MapaDoMeistre.cpp
 
-CMakeFiles/MapaDoMeistre.dir/MapaDoMeistre.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MapaDoMeistre.dir/MapaDoMeistre.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\carlo\Desktop\MarathonTranningCodes\MapaDoMeistre.cpp > CMakeFiles\MapaDoMeistre.dir\MapaDoMeistre.cpp.i
+CMakeFiles/MapaDoMeistre.dir/RuanContest/Grafos/MapaDoMeistre.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MapaDoMeistre.dir/RuanContest/Grafos/MapaDoMeistre.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\carlo\Desktop\MarathonTranningCodes\RuanContest\Grafos\MapaDoMeistre.cpp > CMakeFiles\MapaDoMeistre.dir\RuanContest\Grafos\MapaDoMeistre.cpp.i
 
-CMakeFiles/MapaDoMeistre.dir/MapaDoMeistre.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MapaDoMeistre.dir/MapaDoMeistre.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\carlo\Desktop\MarathonTranningCodes\MapaDoMeistre.cpp -o CMakeFiles\MapaDoMeistre.dir\MapaDoMeistre.cpp.s
-
-CMakeFiles/MapaDoMeistre.dir/test.cpp.obj: CMakeFiles/MapaDoMeistre.dir/flags.make
-CMakeFiles/MapaDoMeistre.dir/test.cpp.obj: ../test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MapaDoMeistre.dir/test.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\MapaDoMeistre.dir\test.cpp.obj -c C:\Users\carlo\Desktop\MarathonTranningCodes\test.cpp
-
-CMakeFiles/MapaDoMeistre.dir/test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MapaDoMeistre.dir/test.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\carlo\Desktop\MarathonTranningCodes\test.cpp > CMakeFiles\MapaDoMeistre.dir\test.cpp.i
-
-CMakeFiles/MapaDoMeistre.dir/test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MapaDoMeistre.dir/test.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\carlo\Desktop\MarathonTranningCodes\test.cpp -o CMakeFiles\MapaDoMeistre.dir\test.cpp.s
+CMakeFiles/MapaDoMeistre.dir/RuanContest/Grafos/MapaDoMeistre.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MapaDoMeistre.dir/RuanContest/Grafos/MapaDoMeistre.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\carlo\Desktop\MarathonTranningCodes\RuanContest\Grafos\MapaDoMeistre.cpp -o CMakeFiles\MapaDoMeistre.dir\RuanContest\Grafos\MapaDoMeistre.cpp.s
 
 # Object files for target MapaDoMeistre
 MapaDoMeistre_OBJECTS = \
-"CMakeFiles/MapaDoMeistre.dir/MapaDoMeistre.cpp.obj" \
-"CMakeFiles/MapaDoMeistre.dir/test.cpp.obj"
+"CMakeFiles/MapaDoMeistre.dir/RuanContest/Grafos/MapaDoMeistre.cpp.obj"
 
 # External object files for target MapaDoMeistre
 MapaDoMeistre_EXTERNAL_OBJECTS =
 
-MapaDoMeistre.exe: CMakeFiles/MapaDoMeistre.dir/MapaDoMeistre.cpp.obj
-MapaDoMeistre.exe: CMakeFiles/MapaDoMeistre.dir/test.cpp.obj
+MapaDoMeistre.exe: CMakeFiles/MapaDoMeistre.dir/RuanContest/Grafos/MapaDoMeistre.cpp.obj
 MapaDoMeistre.exe: CMakeFiles/MapaDoMeistre.dir/build.make
 MapaDoMeistre.exe: CMakeFiles/MapaDoMeistre.dir/linklibs.rsp
 MapaDoMeistre.exe: CMakeFiles/MapaDoMeistre.dir/objects1.rsp
 MapaDoMeistre.exe: CMakeFiles/MapaDoMeistre.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable MapaDoMeistre.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable MapaDoMeistre.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\MapaDoMeistre.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

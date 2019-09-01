@@ -122,6 +122,86 @@ MarathonTranningCodes/fast:
 	$(MAKE) -f CMakeFiles\MarathonTranningCodes.dir\build.make CMakeFiles/MarathonTranningCodes.dir/build
 .PHONY : MarathonTranningCodes/fast
 
+#=============================================================================
+# Target rules for targets named MapaDoMeistre
+
+# Build rule for target.
+MapaDoMeistre: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 MapaDoMeistre
+.PHONY : MapaDoMeistre
+
+# fast build rule for target.
+MapaDoMeistre/fast:
+	$(MAKE) -f CMakeFiles\MapaDoMeistre.dir\build.make CMakeFiles/MapaDoMeistre.dir/build
+.PHONY : MapaDoMeistre/fast
+
+#=============================================================================
+# Target rules for targets named Costa
+
+# Build rule for target.
+Costa: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 Costa
+.PHONY : Costa
+
+# fast build rule for target.
+Costa/fast:
+	$(MAKE) -f CMakeFiles\Costa.dir\build.make CMakeFiles/Costa.dir/build
+.PHONY : Costa/fast
+
+RuanContest/Grafos/Costa.obj: RuanContest/Grafos/Costa.cpp.obj
+
+.PHONY : RuanContest/Grafos/Costa.obj
+
+# target to build an object file
+RuanContest/Grafos/Costa.cpp.obj:
+	$(MAKE) -f CMakeFiles\Costa.dir\build.make CMakeFiles/Costa.dir/RuanContest/Grafos/Costa.cpp.obj
+.PHONY : RuanContest/Grafos/Costa.cpp.obj
+
+RuanContest/Grafos/Costa.i: RuanContest/Grafos/Costa.cpp.i
+
+.PHONY : RuanContest/Grafos/Costa.i
+
+# target to preprocess a source file
+RuanContest/Grafos/Costa.cpp.i:
+	$(MAKE) -f CMakeFiles\Costa.dir\build.make CMakeFiles/Costa.dir/RuanContest/Grafos/Costa.cpp.i
+.PHONY : RuanContest/Grafos/Costa.cpp.i
+
+RuanContest/Grafos/Costa.s: RuanContest/Grafos/Costa.cpp.s
+
+.PHONY : RuanContest/Grafos/Costa.s
+
+# target to generate assembly for a file
+RuanContest/Grafos/Costa.cpp.s:
+	$(MAKE) -f CMakeFiles\Costa.dir\build.make CMakeFiles/Costa.dir/RuanContest/Grafos/Costa.cpp.s
+.PHONY : RuanContest/Grafos/Costa.cpp.s
+
+RuanContest/Grafos/MapaDoMeistre.obj: RuanContest/Grafos/MapaDoMeistre.cpp.obj
+
+.PHONY : RuanContest/Grafos/MapaDoMeistre.obj
+
+# target to build an object file
+RuanContest/Grafos/MapaDoMeistre.cpp.obj:
+	$(MAKE) -f CMakeFiles\MapaDoMeistre.dir\build.make CMakeFiles/MapaDoMeistre.dir/RuanContest/Grafos/MapaDoMeistre.cpp.obj
+.PHONY : RuanContest/Grafos/MapaDoMeistre.cpp.obj
+
+RuanContest/Grafos/MapaDoMeistre.i: RuanContest/Grafos/MapaDoMeistre.cpp.i
+
+.PHONY : RuanContest/Grafos/MapaDoMeistre.i
+
+# target to preprocess a source file
+RuanContest/Grafos/MapaDoMeistre.cpp.i:
+	$(MAKE) -f CMakeFiles\MapaDoMeistre.dir\build.make CMakeFiles/MapaDoMeistre.dir/RuanContest/Grafos/MapaDoMeistre.cpp.i
+.PHONY : RuanContest/Grafos/MapaDoMeistre.cpp.i
+
+RuanContest/Grafos/MapaDoMeistre.s: RuanContest/Grafos/MapaDoMeistre.cpp.s
+
+.PHONY : RuanContest/Grafos/MapaDoMeistre.s
+
+# target to generate assembly for a file
+RuanContest/Grafos/MapaDoMeistre.cpp.s:
+	$(MAKE) -f CMakeFiles\MapaDoMeistre.dir\build.make CMakeFiles/MapaDoMeistre.dir/RuanContest/Grafos/MapaDoMeistre.cpp.s
+.PHONY : RuanContest/Grafos/MapaDoMeistre.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -156,8 +236,16 @@ help:
 	@echo ... clean
 	@echo ... depend
 	@echo ... MarathonTranningCodes
+	@echo ... MapaDoMeistre
+	@echo ... Costa
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... RuanContest/Grafos/Costa.obj
+	@echo ... RuanContest/Grafos/Costa.i
+	@echo ... RuanContest/Grafos/Costa.s
+	@echo ... RuanContest/Grafos/MapaDoMeistre.obj
+	@echo ... RuanContest/Grafos/MapaDoMeistre.i
+	@echo ... RuanContest/Grafos/MapaDoMeistre.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

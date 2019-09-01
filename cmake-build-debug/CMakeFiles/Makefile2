@@ -70,7 +70,7 @@ CMAKE_BINARY_DIR = C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debu
 CMakeFiles/MarathonTranningCodes.dir/all:
 	$(MAKE) -f CMakeFiles\MarathonTranningCodes.dir\build.make CMakeFiles/MarathonTranningCodes.dir/depend
 	$(MAKE) -f CMakeFiles\MarathonTranningCodes.dir\build.make CMakeFiles/MarathonTranningCodes.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target MarathonTranningCodes"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=5,6 "Built target MarathonTranningCodes"
 .PHONY : CMakeFiles/MarathonTranningCodes.dir/all
 
 # Include target in all.
@@ -97,6 +97,80 @@ CMakeFiles/MarathonTranningCodes.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/MarathonTranningCodes.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/MapaDoMeistre.dir
+
+# All Build rule for target.
+CMakeFiles/MapaDoMeistre.dir/all:
+	$(MAKE) -f CMakeFiles\MapaDoMeistre.dir\build.make CMakeFiles/MapaDoMeistre.dir/depend
+	$(MAKE) -f CMakeFiles\MapaDoMeistre.dir\build.make CMakeFiles/MapaDoMeistre.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=3,4 "Built target MapaDoMeistre"
+.PHONY : CMakeFiles/MapaDoMeistre.dir/all
+
+# Include target in all.
+all: CMakeFiles/MapaDoMeistre.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/MapaDoMeistre.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles 2
+	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/MapaDoMeistre.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/MapaDoMeistre.dir/rule
+
+# Convenience name for target.
+MapaDoMeistre: CMakeFiles/MapaDoMeistre.dir/rule
+
+.PHONY : MapaDoMeistre
+
+# clean rule for target.
+CMakeFiles/MapaDoMeistre.dir/clean:
+	$(MAKE) -f CMakeFiles\MapaDoMeistre.dir\build.make CMakeFiles/MapaDoMeistre.dir/clean
+.PHONY : CMakeFiles/MapaDoMeistre.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/MapaDoMeistre.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/Costa.dir
+
+# All Build rule for target.
+CMakeFiles/Costa.dir/all:
+	$(MAKE) -f CMakeFiles\Costa.dir\build.make CMakeFiles/Costa.dir/depend
+	$(MAKE) -f CMakeFiles\Costa.dir\build.make CMakeFiles/Costa.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target Costa"
+.PHONY : CMakeFiles/Costa.dir/all
+
+# Include target in all.
+all: CMakeFiles/Costa.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Costa.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles 2
+	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/Costa.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/Costa.dir/rule
+
+# Convenience name for target.
+Costa: CMakeFiles/Costa.dir/rule
+
+.PHONY : Costa
+
+# clean rule for target.
+CMakeFiles/Costa.dir/clean:
+	$(MAKE) -f CMakeFiles\Costa.dir\build.make CMakeFiles/Costa.dir/clean
+.PHONY : CMakeFiles/Costa.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/Costa.dir/clean
 
 .PHONY : clean
 

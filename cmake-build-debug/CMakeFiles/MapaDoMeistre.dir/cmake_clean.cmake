@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/MapaDoMeistre.dir/MapaDoMeistre.cpp.obj"
-  "CMakeFiles/MapaDoMeistre.dir/test.cpp.obj"
+  "CMakeFiles/MapaDoMeistre.dir/RuanContest/Grafos/MapaDoMeistre.cpp.obj"
   "MapaDoMeistre.pdb"
   "MapaDoMeistre.exe"
   "MapaDoMeistre.exe.manifest"
