@@ -110,6 +110,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named BalancoDeParentesis
+
+# Build rule for target.
+BalancoDeParentesis: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 BalancoDeParentesis
+.PHONY : BalancoDeParentesis
+
+# fast build rule for target.
+BalancoDeParentesis/fast:
+	$(MAKE) -f CMakeFiles\BalancoDeParentesis.dir\build.make CMakeFiles/BalancoDeParentesis.dir/build
+.PHONY : BalancoDeParentesis/fast
+
+#=============================================================================
 # Target rules for targets named MarathonTranningCodes
 
 # Build rule for target.
@@ -147,6 +160,33 @@ Costa: cmake_check_build_system
 Costa/fast:
 	$(MAKE) -f CMakeFiles\Costa.dir\build.make CMakeFiles/Costa.dir/build
 .PHONY : Costa/fast
+
+RuanContest/EstruturadeDados/BalancoDeParentesis.obj: RuanContest/EstruturadeDados/BalancoDeParentesis.cpp.obj
+
+.PHONY : RuanContest/EstruturadeDados/BalancoDeParentesis.obj
+
+# target to build an object file
+RuanContest/EstruturadeDados/BalancoDeParentesis.cpp.obj:
+	$(MAKE) -f CMakeFiles\BalancoDeParentesis.dir\build.make CMakeFiles/BalancoDeParentesis.dir/RuanContest/EstruturadeDados/BalancoDeParentesis.cpp.obj
+.PHONY : RuanContest/EstruturadeDados/BalancoDeParentesis.cpp.obj
+
+RuanContest/EstruturadeDados/BalancoDeParentesis.i: RuanContest/EstruturadeDados/BalancoDeParentesis.cpp.i
+
+.PHONY : RuanContest/EstruturadeDados/BalancoDeParentesis.i
+
+# target to preprocess a source file
+RuanContest/EstruturadeDados/BalancoDeParentesis.cpp.i:
+	$(MAKE) -f CMakeFiles\BalancoDeParentesis.dir\build.make CMakeFiles/BalancoDeParentesis.dir/RuanContest/EstruturadeDados/BalancoDeParentesis.cpp.i
+.PHONY : RuanContest/EstruturadeDados/BalancoDeParentesis.cpp.i
+
+RuanContest/EstruturadeDados/BalancoDeParentesis.s: RuanContest/EstruturadeDados/BalancoDeParentesis.cpp.s
+
+.PHONY : RuanContest/EstruturadeDados/BalancoDeParentesis.s
+
+# target to generate assembly for a file
+RuanContest/EstruturadeDados/BalancoDeParentesis.cpp.s:
+	$(MAKE) -f CMakeFiles\BalancoDeParentesis.dir\build.make CMakeFiles/BalancoDeParentesis.dir/RuanContest/EstruturadeDados/BalancoDeParentesis.cpp.s
+.PHONY : RuanContest/EstruturadeDados/BalancoDeParentesis.cpp.s
 
 RuanContest/Grafos/Costa.obj: RuanContest/Grafos/Costa.cpp.obj
 
@@ -235,11 +275,15 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
+	@echo ... BalancoDeParentesis
 	@echo ... MarathonTranningCodes
 	@echo ... MapaDoMeistre
 	@echo ... Costa
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... RuanContest/EstruturadeDados/BalancoDeParentesis.obj
+	@echo ... RuanContest/EstruturadeDados/BalancoDeParentesis.i
+	@echo ... RuanContest/EstruturadeDados/BalancoDeParentesis.s
 	@echo ... RuanContest/Grafos/Costa.obj
 	@echo ... RuanContest/Grafos/Costa.i
 	@echo ... RuanContest/Grafos/Costa.s
