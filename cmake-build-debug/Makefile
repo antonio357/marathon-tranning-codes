@@ -136,6 +136,19 @@ MarathonTranningCodes/fast:
 .PHONY : MarathonTranningCodes/fast
 
 #=============================================================================
+# Target rules for targets named EmBraille
+
+# Build rule for target.
+EmBraille: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 EmBraille
+.PHONY : EmBraille
+
+# fast build rule for target.
+EmBraille/fast:
+	$(MAKE) -f CMakeFiles\EmBraille.dir\build.make CMakeFiles/EmBraille.dir/build
+.PHONY : EmBraille/fast
+
+#=============================================================================
 # Target rules for targets named MapaDoMeistre
 
 # Build rule for target.
@@ -149,6 +162,19 @@ MapaDoMeistre/fast:
 .PHONY : MapaDoMeistre/fast
 
 #=============================================================================
+# Target rules for targets named LuzesDeNatal
+
+# Build rule for target.
+LuzesDeNatal: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 LuzesDeNatal
+.PHONY : LuzesDeNatal
+
+# fast build rule for target.
+LuzesDeNatal/fast:
+	$(MAKE) -f CMakeFiles\LuzesDeNatal.dir\build.make CMakeFiles/LuzesDeNatal.dir/build
+.PHONY : LuzesDeNatal/fast
+
+#=============================================================================
 # Target rules for targets named Costa
 
 # Build rule for target.
@@ -160,6 +186,33 @@ Costa: cmake_check_build_system
 Costa/fast:
 	$(MAKE) -f CMakeFiles\Costa.dir\build.make CMakeFiles/Costa.dir/build
 .PHONY : Costa/fast
+
+RuanContest/ADHOCeAlg.Gulosos/EmBraille.obj: RuanContest/ADHOCeAlg.Gulosos/EmBraille.cpp.obj
+
+.PHONY : RuanContest/ADHOCeAlg.Gulosos/EmBraille.obj
+
+# target to build an object file
+RuanContest/ADHOCeAlg.Gulosos/EmBraille.cpp.obj:
+	$(MAKE) -f CMakeFiles\EmBraille.dir\build.make CMakeFiles/EmBraille.dir/RuanContest/ADHOCeAlg.Gulosos/EmBraille.cpp.obj
+.PHONY : RuanContest/ADHOCeAlg.Gulosos/EmBraille.cpp.obj
+
+RuanContest/ADHOCeAlg.Gulosos/EmBraille.i: RuanContest/ADHOCeAlg.Gulosos/EmBraille.cpp.i
+
+.PHONY : RuanContest/ADHOCeAlg.Gulosos/EmBraille.i
+
+# target to preprocess a source file
+RuanContest/ADHOCeAlg.Gulosos/EmBraille.cpp.i:
+	$(MAKE) -f CMakeFiles\EmBraille.dir\build.make CMakeFiles/EmBraille.dir/RuanContest/ADHOCeAlg.Gulosos/EmBraille.cpp.i
+.PHONY : RuanContest/ADHOCeAlg.Gulosos/EmBraille.cpp.i
+
+RuanContest/ADHOCeAlg.Gulosos/EmBraille.s: RuanContest/ADHOCeAlg.Gulosos/EmBraille.cpp.s
+
+.PHONY : RuanContest/ADHOCeAlg.Gulosos/EmBraille.s
+
+# target to generate assembly for a file
+RuanContest/ADHOCeAlg.Gulosos/EmBraille.cpp.s:
+	$(MAKE) -f CMakeFiles\EmBraille.dir\build.make CMakeFiles/EmBraille.dir/RuanContest/ADHOCeAlg.Gulosos/EmBraille.cpp.s
+.PHONY : RuanContest/ADHOCeAlg.Gulosos/EmBraille.cpp.s
 
 RuanContest/EstruturadeDados/BalancoDeParentesis.obj: RuanContest/EstruturadeDados/BalancoDeParentesis.cpp.obj
 
@@ -269,6 +322,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles\MarathonTranningCodes.dir\build.make CMakeFiles/MarathonTranningCodes.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+randomTasks/LuzesDeNatal.obj: randomTasks/LuzesDeNatal.cpp.obj
+
+.PHONY : randomTasks/LuzesDeNatal.obj
+
+# target to build an object file
+randomTasks/LuzesDeNatal.cpp.obj:
+	$(MAKE) -f CMakeFiles\LuzesDeNatal.dir\build.make CMakeFiles/LuzesDeNatal.dir/randomTasks/LuzesDeNatal.cpp.obj
+.PHONY : randomTasks/LuzesDeNatal.cpp.obj
+
+randomTasks/LuzesDeNatal.i: randomTasks/LuzesDeNatal.cpp.i
+
+.PHONY : randomTasks/LuzesDeNatal.i
+
+# target to preprocess a source file
+randomTasks/LuzesDeNatal.cpp.i:
+	$(MAKE) -f CMakeFiles\LuzesDeNatal.dir\build.make CMakeFiles/LuzesDeNatal.dir/randomTasks/LuzesDeNatal.cpp.i
+.PHONY : randomTasks/LuzesDeNatal.cpp.i
+
+randomTasks/LuzesDeNatal.s: randomTasks/LuzesDeNatal.cpp.s
+
+.PHONY : randomTasks/LuzesDeNatal.s
+
+# target to generate assembly for a file
+randomTasks/LuzesDeNatal.cpp.s:
+	$(MAKE) -f CMakeFiles\LuzesDeNatal.dir\build.make CMakeFiles/LuzesDeNatal.dir/randomTasks/LuzesDeNatal.cpp.s
+.PHONY : randomTasks/LuzesDeNatal.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -277,10 +357,15 @@ help:
 	@echo ... depend
 	@echo ... BalancoDeParentesis
 	@echo ... MarathonTranningCodes
+	@echo ... EmBraille
 	@echo ... MapaDoMeistre
+	@echo ... LuzesDeNatal
 	@echo ... Costa
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... RuanContest/ADHOCeAlg.Gulosos/EmBraille.obj
+	@echo ... RuanContest/ADHOCeAlg.Gulosos/EmBraille.i
+	@echo ... RuanContest/ADHOCeAlg.Gulosos/EmBraille.s
 	@echo ... RuanContest/EstruturadeDados/BalancoDeParentesis.obj
 	@echo ... RuanContest/EstruturadeDados/BalancoDeParentesis.i
 	@echo ... RuanContest/EstruturadeDados/BalancoDeParentesis.s
@@ -293,6 +378,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... randomTasks/LuzesDeNatal.obj
+	@echo ... randomTasks/LuzesDeNatal.i
+	@echo ... randomTasks/LuzesDeNatal.s
 .PHONY : help
 
 

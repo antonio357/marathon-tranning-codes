@@ -1,6 +1,8 @@
 C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/CMakeFiles/BalancoDeParentesis.dir
 C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/CMakeFiles/MarathonTranningCodes.dir
+C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/CMakeFiles/EmBraille.dir
 C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/CMakeFiles/MapaDoMeistre.dir
+C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/CMakeFiles/LuzesDeNatal.dir
 C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/CMakeFiles/Costa.dir
 C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/CMakeFiles/edit_cache.dir
 C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/CMakeFiles/rebuild_cache.dir

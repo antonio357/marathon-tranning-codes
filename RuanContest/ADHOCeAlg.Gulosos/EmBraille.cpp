@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -33,12 +34,13 @@ void adjust(int number, int seg, char* pr) {
     }
 }
 
-void toBraille(char* numbers, int lenght) {
+void toBraille(string input) { // char* numbers, int lenght
     char pr[2] = {'.', '.'};
+    int lenght = input.lenght();
     for (int seg = 0; seg < 3; seg++) {
         for (int numb = 0; numb < lenght; numb++) {
             pr[0] = '.'; pr[1] = '.';
-            adjust(numbers[numb], seg, pr);
+            adjust(input[numb], seg, pr);
             if (numb == (lenght - 1)) printf("%c%c\n", pr[0], pr[1]);
             else printf("%c%c ", pr[0], pr[1]);
         }
@@ -46,7 +48,6 @@ void toBraille(char* numbers, int lenght) {
 }
 
 int number(char** matrix, int column) {
-    cout << "inside number function" << endl;
     char actual = matrix[0][column];
     char right = matrix[0][column + 1];
     char down = matrix[1][column];
@@ -74,38 +75,22 @@ void toNumbers(char** braille, int lenght) {
 
 int main() {
     int n;
-    char type;
-    string input[3];
-    int inCounter;
-    char* numbers;
-    char** brailleInput;
-    char checkBlankSpace;
-    while (1) {
+    char ch;
+    string input;
+    string input1;
+    string input2;
+    while (true) {
         cin >> n;
         if (n == 0) break;
-        cin >> type;
-        if (type == 'S') {
-            numbers = new char[n];
-            cin >> numbers;
-            toBraille(numbers, n);
+        cin >> ch;
+        if (ch == 'S') {
+            getline(cin, input);
+            toBraille(input);
         }
-        else {
-            brailleInput = new char*[3];
-            for (int seg = 0; seg < 3; seg++) {
-                brailleInput[seg] = new char[n*2 + 1];
-                getline(cin, input[seg]);
-                cin.ignore();
-                inCounter = 0;
-                for (int i = 0; i < input[seg].length(); i++) {
-                    checkBlankSpace = input[seg][i];
-                    if (checkBlankSpace != ' ') {
-                        brailleInput[seg][inCounter] = checkBlankSpace;
-                        inCounter++;
-                    }
-                } brailleInput[seg][input[seg].length() - 1] = '\0';
-            }
-            //for (int i = 0; i < 3; i++) cout << brailleInput[i] << endl;
-            toNumbers(brailleInput, n);
+        else if (ch == 'B') {
+            getline(cin, input);
+            getline(cin, input1);
+            getline(cin, input2);
         }
     }
     return 0;
