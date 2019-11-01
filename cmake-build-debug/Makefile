@@ -187,6 +187,19 @@ Costa/fast:
 	$(MAKE) -f CMakeFiles\Costa.dir\build.make CMakeFiles/Costa.dir/build
 .PHONY : Costa/fast
 
+#=============================================================================
+# Target rules for targets named FrequenciaDeLetras
+
+# Build rule for target.
+FrequenciaDeLetras: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 FrequenciaDeLetras
+.PHONY : FrequenciaDeLetras
+
+# fast build rule for target.
+FrequenciaDeLetras/fast:
+	$(MAKE) -f CMakeFiles\FrequenciaDeLetras.dir\build.make CMakeFiles/FrequenciaDeLetras.dir/build
+.PHONY : FrequenciaDeLetras/fast
+
 RuanContest/ADHOCeAlg.Gulosos/EmBraille.obj: RuanContest/ADHOCeAlg.Gulosos/EmBraille.cpp.obj
 
 .PHONY : RuanContest/ADHOCeAlg.Gulosos/EmBraille.obj
@@ -240,6 +253,33 @@ RuanContest/EstruturadeDados/BalancoDeParentesis.s: RuanContest/EstruturadeDados
 RuanContest/EstruturadeDados/BalancoDeParentesis.cpp.s:
 	$(MAKE) -f CMakeFiles\BalancoDeParentesis.dir\build.make CMakeFiles/BalancoDeParentesis.dir/RuanContest/EstruturadeDados/BalancoDeParentesis.cpp.s
 .PHONY : RuanContest/EstruturadeDados/BalancoDeParentesis.cpp.s
+
+RuanContest/EstruturadeDados/FrequenciaDeLetras.obj: RuanContest/EstruturadeDados/FrequenciaDeLetras.cpp.obj
+
+.PHONY : RuanContest/EstruturadeDados/FrequenciaDeLetras.obj
+
+# target to build an object file
+RuanContest/EstruturadeDados/FrequenciaDeLetras.cpp.obj:
+	$(MAKE) -f CMakeFiles\FrequenciaDeLetras.dir\build.make CMakeFiles/FrequenciaDeLetras.dir/RuanContest/EstruturadeDados/FrequenciaDeLetras.cpp.obj
+.PHONY : RuanContest/EstruturadeDados/FrequenciaDeLetras.cpp.obj
+
+RuanContest/EstruturadeDados/FrequenciaDeLetras.i: RuanContest/EstruturadeDados/FrequenciaDeLetras.cpp.i
+
+.PHONY : RuanContest/EstruturadeDados/FrequenciaDeLetras.i
+
+# target to preprocess a source file
+RuanContest/EstruturadeDados/FrequenciaDeLetras.cpp.i:
+	$(MAKE) -f CMakeFiles\FrequenciaDeLetras.dir\build.make CMakeFiles/FrequenciaDeLetras.dir/RuanContest/EstruturadeDados/FrequenciaDeLetras.cpp.i
+.PHONY : RuanContest/EstruturadeDados/FrequenciaDeLetras.cpp.i
+
+RuanContest/EstruturadeDados/FrequenciaDeLetras.s: RuanContest/EstruturadeDados/FrequenciaDeLetras.cpp.s
+
+.PHONY : RuanContest/EstruturadeDados/FrequenciaDeLetras.s
+
+# target to generate assembly for a file
+RuanContest/EstruturadeDados/FrequenciaDeLetras.cpp.s:
+	$(MAKE) -f CMakeFiles\FrequenciaDeLetras.dir\build.make CMakeFiles/FrequenciaDeLetras.dir/RuanContest/EstruturadeDados/FrequenciaDeLetras.cpp.s
+.PHONY : RuanContest/EstruturadeDados/FrequenciaDeLetras.cpp.s
 
 RuanContest/Grafos/Costa.obj: RuanContest/Grafos/Costa.cpp.obj
 
@@ -361,6 +401,7 @@ help:
 	@echo ... MapaDoMeistre
 	@echo ... LuzesDeNatal
 	@echo ... Costa
+	@echo ... FrequenciaDeLetras
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... RuanContest/ADHOCeAlg.Gulosos/EmBraille.obj
@@ -369,6 +410,9 @@ help:
 	@echo ... RuanContest/EstruturadeDados/BalancoDeParentesis.obj
 	@echo ... RuanContest/EstruturadeDados/BalancoDeParentesis.i
 	@echo ... RuanContest/EstruturadeDados/BalancoDeParentesis.s
+	@echo ... RuanContest/EstruturadeDados/FrequenciaDeLetras.obj
+	@echo ... RuanContest/EstruturadeDados/FrequenciaDeLetras.i
+	@echo ... RuanContest/EstruturadeDados/FrequenciaDeLetras.s
 	@echo ... RuanContest/Grafos/Costa.obj
 	@echo ... RuanContest/Grafos/Costa.i
 	@echo ... RuanContest/Grafos/Costa.s

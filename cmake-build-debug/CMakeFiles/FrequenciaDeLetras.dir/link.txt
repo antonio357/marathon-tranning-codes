@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2019.2\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\FrequenciaDeLetras.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\FrequenciaDeLetras.dir/objects.a @CMakeFiles\FrequenciaDeLetras.dir\objects1.rsp
+C:\MinGW\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\FrequenciaDeLetras.dir/objects.a -Wl,--no-whole-archive  -o FrequenciaDeLetras.exe -Wl,--out-implib,libFrequenciaDeLetras.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\FrequenciaDeLetras.dir\linklibs.rsp

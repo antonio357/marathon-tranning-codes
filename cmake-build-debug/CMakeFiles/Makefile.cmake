@@ -59,4 +59,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/MapaDoMeistre.dir/DependInfo.cmake"
   "CMakeFiles/LuzesDeNatal.dir/DependInfo.cmake"
   "CMakeFiles/Costa.dir/DependInfo.cmake"
+  "CMakeFiles/FrequenciaDeLetras.dir/DependInfo.cmake"
   )
