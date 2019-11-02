@@ -107,7 +107,7 @@ clean: CMakeFiles/BalancoDeParentesis.dir/clean
 CMakeFiles/MarathonTranningCodes.dir/all:
 	$(MAKE) -f CMakeFiles\MarathonTranningCodes.dir\build.make CMakeFiles/MarathonTranningCodes.dir/depend
 	$(MAKE) -f CMakeFiles\MarathonTranningCodes.dir\build.make CMakeFiles/MarathonTranningCodes.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=13,14 "Built target MarathonTranningCodes"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=15,16 "Built target MarathonTranningCodes"
 .PHONY : CMakeFiles/MarathonTranningCodes.dir/all
 
 # Include target in all.
@@ -144,7 +144,7 @@ clean: CMakeFiles/MarathonTranningCodes.dir/clean
 CMakeFiles/EmBraille.dir/all:
 	$(MAKE) -f CMakeFiles\EmBraille.dir\build.make CMakeFiles/EmBraille.dir/depend
 	$(MAKE) -f CMakeFiles\EmBraille.dir\build.make CMakeFiles/EmBraille.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=5,6 "Built target EmBraille"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=7,8 "Built target EmBraille"
 .PHONY : CMakeFiles/EmBraille.dir/all
 
 # Include target in all.
@@ -181,7 +181,7 @@ clean: CMakeFiles/EmBraille.dir/clean
 CMakeFiles/MapaDoMeistre.dir/all:
 	$(MAKE) -f CMakeFiles\MapaDoMeistre.dir\build.make CMakeFiles/MapaDoMeistre.dir/depend
 	$(MAKE) -f CMakeFiles\MapaDoMeistre.dir\build.make CMakeFiles/MapaDoMeistre.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=11,12 "Built target MapaDoMeistre"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=13,14 "Built target MapaDoMeistre"
 .PHONY : CMakeFiles/MapaDoMeistre.dir/all
 
 # Include target in all.
@@ -218,7 +218,7 @@ clean: CMakeFiles/MapaDoMeistre.dir/clean
 CMakeFiles/LuzesDeNatal.dir/all:
 	$(MAKE) -f CMakeFiles\LuzesDeNatal.dir\build.make CMakeFiles/LuzesDeNatal.dir/depend
 	$(MAKE) -f CMakeFiles\LuzesDeNatal.dir\build.make CMakeFiles/LuzesDeNatal.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=9,10 "Built target LuzesDeNatal"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=11,12 "Built target LuzesDeNatal"
 .PHONY : CMakeFiles/LuzesDeNatal.dir/all
 
 # Include target in all.
@@ -255,7 +255,7 @@ clean: CMakeFiles/LuzesDeNatal.dir/clean
 CMakeFiles/Costa.dir/all:
 	$(MAKE) -f CMakeFiles\Costa.dir\build.make CMakeFiles/Costa.dir/depend
 	$(MAKE) -f CMakeFiles\Costa.dir\build.make CMakeFiles/Costa.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=3,4 "Built target Costa"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=5,6 "Built target Costa"
 .PHONY : CMakeFiles/Costa.dir/all
 
 # Include target in all.
@@ -292,7 +292,7 @@ clean: CMakeFiles/Costa.dir/clean
 CMakeFiles/FrequenciaDeLetras.dir/all:
 	$(MAKE) -f CMakeFiles\FrequenciaDeLetras.dir\build.make CMakeFiles/FrequenciaDeLetras.dir/depend
 	$(MAKE) -f CMakeFiles\FrequenciaDeLetras.dir\build.make CMakeFiles/FrequenciaDeLetras.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=7,8 "Built target FrequenciaDeLetras"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=9,10 "Built target FrequenciaDeLetras"
 .PHONY : CMakeFiles/FrequenciaDeLetras.dir/all
 
 # Include target in all.
@@ -319,6 +319,43 @@ CMakeFiles/FrequenciaDeLetras.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/FrequenciaDeLetras.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/Camisetas.dir
+
+# All Build rule for target.
+CMakeFiles/Camisetas.dir/all:
+	$(MAKE) -f CMakeFiles\Camisetas.dir\build.make CMakeFiles/Camisetas.dir/depend
+	$(MAKE) -f CMakeFiles\Camisetas.dir\build.make CMakeFiles/Camisetas.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=3,4 "Built target Camisetas"
+.PHONY : CMakeFiles/Camisetas.dir/all
+
+# Include target in all.
+all: CMakeFiles/Camisetas.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Camisetas.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles 2
+	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/Camisetas.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/Camisetas.dir/rule
+
+# Convenience name for target.
+Camisetas: CMakeFiles/Camisetas.dir/rule
+
+.PHONY : Camisetas
+
+# clean rule for target.
+CMakeFiles/Camisetas.dir/clean:
+	$(MAKE) -f CMakeFiles\Camisetas.dir\build.make CMakeFiles/Camisetas.dir/clean
+.PHONY : CMakeFiles/Camisetas.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/Camisetas.dir/clean
 
 .PHONY : clean
 

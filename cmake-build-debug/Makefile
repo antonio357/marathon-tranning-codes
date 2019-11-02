@@ -200,6 +200,19 @@ FrequenciaDeLetras/fast:
 	$(MAKE) -f CMakeFiles\FrequenciaDeLetras.dir\build.make CMakeFiles/FrequenciaDeLetras.dir/build
 .PHONY : FrequenciaDeLetras/fast
 
+#=============================================================================
+# Target rules for targets named Camisetas
+
+# Build rule for target.
+Camisetas: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 Camisetas
+.PHONY : Camisetas
+
+# fast build rule for target.
+Camisetas/fast:
+	$(MAKE) -f CMakeFiles\Camisetas.dir\build.make CMakeFiles/Camisetas.dir/build
+.PHONY : Camisetas/fast
+
 RuanContest/ADHOCeAlg.Gulosos/EmBraille.obj: RuanContest/ADHOCeAlg.Gulosos/EmBraille.cpp.obj
 
 .PHONY : RuanContest/ADHOCeAlg.Gulosos/EmBraille.obj
@@ -253,6 +266,33 @@ RuanContest/EstruturadeDados/BalancoDeParentesis.s: RuanContest/EstruturadeDados
 RuanContest/EstruturadeDados/BalancoDeParentesis.cpp.s:
 	$(MAKE) -f CMakeFiles\BalancoDeParentesis.dir\build.make CMakeFiles/BalancoDeParentesis.dir/RuanContest/EstruturadeDados/BalancoDeParentesis.cpp.s
 .PHONY : RuanContest/EstruturadeDados/BalancoDeParentesis.cpp.s
+
+RuanContest/EstruturadeDados/Camisetas.obj: RuanContest/EstruturadeDados/Camisetas.cpp.obj
+
+.PHONY : RuanContest/EstruturadeDados/Camisetas.obj
+
+# target to build an object file
+RuanContest/EstruturadeDados/Camisetas.cpp.obj:
+	$(MAKE) -f CMakeFiles\Camisetas.dir\build.make CMakeFiles/Camisetas.dir/RuanContest/EstruturadeDados/Camisetas.cpp.obj
+.PHONY : RuanContest/EstruturadeDados/Camisetas.cpp.obj
+
+RuanContest/EstruturadeDados/Camisetas.i: RuanContest/EstruturadeDados/Camisetas.cpp.i
+
+.PHONY : RuanContest/EstruturadeDados/Camisetas.i
+
+# target to preprocess a source file
+RuanContest/EstruturadeDados/Camisetas.cpp.i:
+	$(MAKE) -f CMakeFiles\Camisetas.dir\build.make CMakeFiles/Camisetas.dir/RuanContest/EstruturadeDados/Camisetas.cpp.i
+.PHONY : RuanContest/EstruturadeDados/Camisetas.cpp.i
+
+RuanContest/EstruturadeDados/Camisetas.s: RuanContest/EstruturadeDados/Camisetas.cpp.s
+
+.PHONY : RuanContest/EstruturadeDados/Camisetas.s
+
+# target to generate assembly for a file
+RuanContest/EstruturadeDados/Camisetas.cpp.s:
+	$(MAKE) -f CMakeFiles\Camisetas.dir\build.make CMakeFiles/Camisetas.dir/RuanContest/EstruturadeDados/Camisetas.cpp.s
+.PHONY : RuanContest/EstruturadeDados/Camisetas.cpp.s
 
 RuanContest/EstruturadeDados/FrequenciaDeLetras.obj: RuanContest/EstruturadeDados/FrequenciaDeLetras.cpp.obj
 
@@ -402,6 +442,7 @@ help:
 	@echo ... LuzesDeNatal
 	@echo ... Costa
 	@echo ... FrequenciaDeLetras
+	@echo ... Camisetas
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... RuanContest/ADHOCeAlg.Gulosos/EmBraille.obj
@@ -410,6 +451,9 @@ help:
 	@echo ... RuanContest/EstruturadeDados/BalancoDeParentesis.obj
 	@echo ... RuanContest/EstruturadeDados/BalancoDeParentesis.i
 	@echo ... RuanContest/EstruturadeDados/BalancoDeParentesis.s
+	@echo ... RuanContest/EstruturadeDados/Camisetas.obj
+	@echo ... RuanContest/EstruturadeDados/Camisetas.i
+	@echo ... RuanContest/EstruturadeDados/Camisetas.s
 	@echo ... RuanContest/EstruturadeDados/FrequenciaDeLetras.obj
 	@echo ... RuanContest/EstruturadeDados/FrequenciaDeLetras.i
 	@echo ... RuanContest/EstruturadeDados/FrequenciaDeLetras.s

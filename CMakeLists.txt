@@ -10,3 +10,4 @@ add_executable(BalancoDeParentesis RuanContest/EstruturadeDados/BalancoDeParente
 add_executable(EmBraille RuanContest/ADHOCeAlg.Gulosos/EmBraille.cpp)
 add_executable(LuzesDeNatal randomTasks/LuzesDeNatal.cpp)
 add_executable(FrequenciaDeLetras RuanContest/EstruturadeDados/FrequenciaDeLetras.cpp)
+add_executable(Camisetas RuanContest/EstruturadeDados/Camisetas.cpp)
