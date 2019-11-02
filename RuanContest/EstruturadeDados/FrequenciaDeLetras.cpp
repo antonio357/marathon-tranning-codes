@@ -10,6 +10,7 @@ int main() {
     int nCases;
     int biggest = 0;
     cin >> nCases;
+    cin.ignore();
     string input;
     char c;
     int alphabet_letters[nLetters];
@@ -21,7 +22,6 @@ int main() {
         }
         biggest = 0;
 
-        setbuf(stdin, NULL);
         getline(cin, input);
 
         for (int k = 0; k < input.length(); ++k) {
