@@ -107,7 +107,7 @@ clean: CMakeFiles/BalancoDeParentesis.dir/clean
 CMakeFiles/MarathonTranningCodes.dir/all:
 	$(MAKE) -f CMakeFiles\MarathonTranningCodes.dir\build.make CMakeFiles/MarathonTranningCodes.dir/depend
 	$(MAKE) -f CMakeFiles\MarathonTranningCodes.dir\build.make CMakeFiles/MarathonTranningCodes.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=15,16 "Built target MarathonTranningCodes"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=17,18 "Built target MarathonTranningCodes"
 .PHONY : CMakeFiles/MarathonTranningCodes.dir/all
 
 # Include target in all.
@@ -175,13 +175,50 @@ clean: CMakeFiles/EmBraille.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/IdaFeira.dir
+
+# All Build rule for target.
+CMakeFiles/IdaFeira.dir/all:
+	$(MAKE) -f CMakeFiles\IdaFeira.dir\build.make CMakeFiles/IdaFeira.dir/depend
+	$(MAKE) -f CMakeFiles\IdaFeira.dir\build.make CMakeFiles/IdaFeira.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=11,12 "Built target IdaFeira"
+.PHONY : CMakeFiles/IdaFeira.dir/all
+
+# Include target in all.
+all: CMakeFiles/IdaFeira.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/IdaFeira.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles 2
+	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/IdaFeira.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/IdaFeira.dir/rule
+
+# Convenience name for target.
+IdaFeira: CMakeFiles/IdaFeira.dir/rule
+
+.PHONY : IdaFeira
+
+# clean rule for target.
+CMakeFiles/IdaFeira.dir/clean:
+	$(MAKE) -f CMakeFiles\IdaFeira.dir\build.make CMakeFiles/IdaFeira.dir/clean
+.PHONY : CMakeFiles/IdaFeira.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/IdaFeira.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/MapaDoMeistre.dir
 
 # All Build rule for target.
 CMakeFiles/MapaDoMeistre.dir/all:
 	$(MAKE) -f CMakeFiles\MapaDoMeistre.dir\build.make CMakeFiles/MapaDoMeistre.dir/depend
 	$(MAKE) -f CMakeFiles\MapaDoMeistre.dir\build.make CMakeFiles/MapaDoMeistre.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=13,14 "Built target MapaDoMeistre"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=15,16 "Built target MapaDoMeistre"
 .PHONY : CMakeFiles/MapaDoMeistre.dir/all
 
 # Include target in all.
@@ -218,7 +255,7 @@ clean: CMakeFiles/MapaDoMeistre.dir/clean
 CMakeFiles/LuzesDeNatal.dir/all:
 	$(MAKE) -f CMakeFiles\LuzesDeNatal.dir\build.make CMakeFiles/LuzesDeNatal.dir/depend
 	$(MAKE) -f CMakeFiles\LuzesDeNatal.dir\build.make CMakeFiles/LuzesDeNatal.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=11,12 "Built target LuzesDeNatal"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=13,14 "Built target LuzesDeNatal"
 .PHONY : CMakeFiles/LuzesDeNatal.dir/all
 
 # Include target in all.

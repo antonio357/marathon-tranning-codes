@@ -149,6 +149,19 @@ EmBraille/fast:
 .PHONY : EmBraille/fast
 
 #=============================================================================
+# Target rules for targets named IdaFeira
+
+# Build rule for target.
+IdaFeira: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 IdaFeira
+.PHONY : IdaFeira
+
+# fast build rule for target.
+IdaFeira/fast:
+	$(MAKE) -f CMakeFiles\IdaFeira.dir\build.make CMakeFiles/IdaFeira.dir/build
+.PHONY : IdaFeira/fast
+
+#=============================================================================
 # Target rules for targets named MapaDoMeistre
 
 # Build rule for target.
@@ -321,6 +334,33 @@ RuanContest/EstruturadeDados/FrequenciaDeLetras.cpp.s:
 	$(MAKE) -f CMakeFiles\FrequenciaDeLetras.dir\build.make CMakeFiles/FrequenciaDeLetras.dir/RuanContest/EstruturadeDados/FrequenciaDeLetras.cpp.s
 .PHONY : RuanContest/EstruturadeDados/FrequenciaDeLetras.cpp.s
 
+RuanContest/EstruturadeDados/IdaFeira.obj: RuanContest/EstruturadeDados/IdaFeira.cpp.obj
+
+.PHONY : RuanContest/EstruturadeDados/IdaFeira.obj
+
+# target to build an object file
+RuanContest/EstruturadeDados/IdaFeira.cpp.obj:
+	$(MAKE) -f CMakeFiles\IdaFeira.dir\build.make CMakeFiles/IdaFeira.dir/RuanContest/EstruturadeDados/IdaFeira.cpp.obj
+.PHONY : RuanContest/EstruturadeDados/IdaFeira.cpp.obj
+
+RuanContest/EstruturadeDados/IdaFeira.i: RuanContest/EstruturadeDados/IdaFeira.cpp.i
+
+.PHONY : RuanContest/EstruturadeDados/IdaFeira.i
+
+# target to preprocess a source file
+RuanContest/EstruturadeDados/IdaFeira.cpp.i:
+	$(MAKE) -f CMakeFiles\IdaFeira.dir\build.make CMakeFiles/IdaFeira.dir/RuanContest/EstruturadeDados/IdaFeira.cpp.i
+.PHONY : RuanContest/EstruturadeDados/IdaFeira.cpp.i
+
+RuanContest/EstruturadeDados/IdaFeira.s: RuanContest/EstruturadeDados/IdaFeira.cpp.s
+
+.PHONY : RuanContest/EstruturadeDados/IdaFeira.s
+
+# target to generate assembly for a file
+RuanContest/EstruturadeDados/IdaFeira.cpp.s:
+	$(MAKE) -f CMakeFiles\IdaFeira.dir\build.make CMakeFiles/IdaFeira.dir/RuanContest/EstruturadeDados/IdaFeira.cpp.s
+.PHONY : RuanContest/EstruturadeDados/IdaFeira.cpp.s
+
 RuanContest/Grafos/Costa.obj: RuanContest/Grafos/Costa.cpp.obj
 
 .PHONY : RuanContest/Grafos/Costa.obj
@@ -438,6 +478,7 @@ help:
 	@echo ... BalancoDeParentesis
 	@echo ... MarathonTranningCodes
 	@echo ... EmBraille
+	@echo ... IdaFeira
 	@echo ... MapaDoMeistre
 	@echo ... LuzesDeNatal
 	@echo ... Costa
@@ -457,6 +498,9 @@ help:
 	@echo ... RuanContest/EstruturadeDados/FrequenciaDeLetras.obj
 	@echo ... RuanContest/EstruturadeDados/FrequenciaDeLetras.i
 	@echo ... RuanContest/EstruturadeDados/FrequenciaDeLetras.s
+	@echo ... RuanContest/EstruturadeDados/IdaFeira.obj
+	@echo ... RuanContest/EstruturadeDados/IdaFeira.i
+	@echo ... RuanContest/EstruturadeDados/IdaFeira.s
 	@echo ... RuanContest/Grafos/Costa.obj
 	@echo ... RuanContest/Grafos/Costa.i
 	@echo ... RuanContest/Grafos/Costa.s

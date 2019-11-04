@@ -37,7 +37,7 @@ int main() {
         cin >> nProdutsBougth;
         for (int np = 0; np < nProdutsBougth; np++) {
             cin >> productName >> quantProduct;
-            cout << productName << quantProduct << endl;
+//            cout << productName << quantProduct << endl;
             total += price(produtos, nProdutsDisponible, productName, quantProduct);
             // cout << "total = " << total << endl;
         }

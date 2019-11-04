@@ -56,6 +56,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/BalancoDeParentesis.dir/DependInfo.cmake"
   "CMakeFiles/MarathonTranningCodes.dir/DependInfo.cmake"
   "CMakeFiles/EmBraille.dir/DependInfo.cmake"
+  "CMakeFiles/IdaFeira.dir/DependInfo.cmake"
   "CMakeFiles/MapaDoMeistre.dir/DependInfo.cmake"
   "CMakeFiles/LuzesDeNatal.dir/DependInfo.cmake"
   "CMakeFiles/Costa.dir/DependInfo.cmake"
