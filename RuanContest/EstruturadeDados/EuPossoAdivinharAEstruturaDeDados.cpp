@@ -1,126 +1,76 @@
-#include<iostream>
-#include<fstream>
-#include<stack>
-#include<queue>
-#include<list>
+#include <iostream>
+#include <stack>
+#include <queue>
 
 using namespace std;
 
-ofstream file;
-
-#define add 1
-#define rem 2
-
-void showlist(list <int> g) { 
-    list <int> :: iterator it; 
-    for(it = g.begin(); it != g.end(); ++it) 
-        cout << '\t' << *it;
-        file << '\t' << *it; 
-    cout << '\n'; 
-    file << endl;
-} 
-
-bool equals(list<int>* lis1, list<int>* lis2) {
-    cout << "at equals" << endl;
-    file << "at equals" << endl;
-    cout << "lis1 = ";
-    file << "lis1 = ";
-    showlist(*lis1);
-    cout << "lis2 = ";
-    file << "lis2 = ";
-    showlist(*lis2);
-    if (lis1->size() != lis2->size()) {
-        cout << "returned false, cause lists got diferent sizes" << endl;
-        file << "returned false, cause lists got diferent sizes" << endl;
-        return false;
+void clearStack(stack<int>* stack) {
+    while (not stack->empty()) {
+        stack->pop();
     }
-    list <int> :: iterator it1 = lis1->begin(); 
-    list <int> :: iterator it2 = lis2->begin();
-    while (it1 != lis1->end() and it2 != lis2->end()) {
-        it1++; it2++;
-        if (*it1 != *it2) {
-            cout << "returned false, cause " << *it1 << " != " << *it2 << endl;
-            file << "returned false, cause " << *it1 << " != " << *it2 << endl;
-            return false;
-        }
-    }
-    cout << "returned true, cause all the elements were identical" << endl;
-    file << "returned true, cause all the elements were identical" << endl;
-    return true;
 }
 
-string match(stack<int>* pilha, queue<int>* fila, priority_queue<int>* filaPrioridade, list<int>* output) {
-    string out = "impossible";
-    int notSureCounter = 0;
-    list<int> forPilha; 
-    list<int> forFila; 
-    list<int> forFilaPrioridade; 
-    while (pilha->empty() != true){
-        forPilha.push_back(pilha->top());
-        forFila.push_back( fila->front());
-        forFilaPrioridade.push_back(filaPrioridade->top());
-        pilha->pop();
-        fila->pop();
-        filaPrioridade->pop();
+void clearQueue(queue<int>* queue) {
+    while (not queue->empty()) {
+        queue->pop();
     }
-    cout << "Pilha = ";
-    file << "Pilha = " << pilha->size() << endl;
-    cout << "Fila = ";
-    file << "Fila = " << fila->size() << endl; 
-    cout << "FilaPrioridade = ";
-    file << "FilaPrioridade = " << filaPrioridade->size() << endl; 
+}
 
-    cout << "forPilha = ";
-    file << "forPilha = ";
-    showlist(forPilha);
-    cout << "forFila = ";
-    file << "forFila = "; 
-    showlist(forFila);
-    cout << "forFilaPrioridade = ";
-    file << "forFilaPrioridade = ";
-    showlist(forFilaPrioridade);
-    cout << "output = ";
-    file << "output = ";
-    showlist(*output);
-    if (equals(output, &forPilha) == true) {
-        notSureCounter++;
-        out = "stack";
+void clearPriorityQueue(priority_queue<int>* priority_queue) {
+    while (not priority_queue->empty()) {
+        priority_queue->pop();
     }
-    if (equals(output, &forFila) == true) {
-        notSureCounter++;
-        out = "queue";
-    }
-    if (equals(output, &forFilaPrioridade) == true) {
-        notSureCounter++;
-        out = "priority queue";
-    }
-    if (notSureCounter > 1) out = "not sure";
-    return out;
 }
 
 int main() {
-    file.open("txtsFiles\\log");
     int nCases;
-    int comandType, cons;
-    string dataStrucut;
-    while (scanf("%d", &nCases) != EOF) {
-        stack<int> pilha;
-        queue<int> fila;
-        priority_queue<int> filaPrioridade;
-        list<int> output;
-        for (int i = 0; i < nCases; i++) {
-            cin >> comandType >>  cons;
-            if (comandType == add) {
-                pilha.push(cons);
-                fila.push(cons);
-                filaPrioridade.push(cons);
+    int opcode, data;
+    stack<int> stack;
+    queue<int> queue;
+    priority_queue<int> priorityQueue;
+    bool  its_stack, its_queue, its_priority_queue;
+
+    while (cin >> nCases) {
+        its_stack = true;
+        its_queue = true;
+        its_priority_queue = true;
+        clearStack(&stack);
+        clearQueue(&queue);
+        clearPriorityQueue(&priorityQueue);
+
+        for (int i = 0; i < nCases; ++i) {
+            cin >> opcode >> data;
+
+            if (opcode == 1) {
+                stack.push(data);
+                queue.push(data);
+                priorityQueue.push(data);
             }
-            else if (comandType == rem) output.push_back(cons);
+
+            else if (opcode == 2) {
+                if (not stack.empty()) {
+                    if (stack.top() != data) its_stack = false;
+                    stack.pop();
+                } else its_stack = false;
+
+                if (not queue.empty()) {
+                    if (queue.front() != data) its_queue = false;
+                    queue.pop();
+                } else its_queue = false;
+
+                if (not priorityQueue.empty()) {
+                    if (priorityQueue.top() != data) its_priority_queue = false;
+                    priorityQueue.pop();
+                } else its_priority_queue = false;
+            }
         }
-        dataStrucut = match(&pilha, &fila, &filaPrioridade, &output);
-        cout << dataStrucut << endl;
-        file << dataStrucut << endl;
+
+        if (its_stack == false and its_queue == false and its_priority_queue == false) cout << "impossible";
+        else if (its_stack == true and its_queue == false and its_priority_queue == false) cout << "stack";
+        else if (its_stack == false and its_queue == true and its_priority_queue == false) cout << "queue";
+        else if (its_stack == false and its_queue == false and its_priority_queue == true) cout << "priority queue";
+        else cout << "not sure";
+        cout << endl;
     }
-    file.close();
     return 0;
 }

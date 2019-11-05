@@ -7,5 +7,6 @@ C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/CMakeFiles/LuzesD
 C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/CMakeFiles/Costa.dir
 C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/CMakeFiles/FrequenciaDeLetras.dir
 C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/CMakeFiles/Camisetas.dir
+C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/CMakeFiles/EuPossoAdivinharAEstruturaDeDados.dir
 C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/CMakeFiles/edit_cache.dir
 C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/CMakeFiles/rebuild_cache.dir

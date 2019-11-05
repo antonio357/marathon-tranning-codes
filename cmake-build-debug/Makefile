@@ -226,6 +226,19 @@ Camisetas/fast:
 	$(MAKE) -f CMakeFiles\Camisetas.dir\build.make CMakeFiles/Camisetas.dir/build
 .PHONY : Camisetas/fast
 
+#=============================================================================
+# Target rules for targets named EuPossoAdivinharAEstruturaDeDados
+
+# Build rule for target.
+EuPossoAdivinharAEstruturaDeDados: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 EuPossoAdivinharAEstruturaDeDados
+.PHONY : EuPossoAdivinharAEstruturaDeDados
+
+# fast build rule for target.
+EuPossoAdivinharAEstruturaDeDados/fast:
+	$(MAKE) -f CMakeFiles\EuPossoAdivinharAEstruturaDeDados.dir\build.make CMakeFiles/EuPossoAdivinharAEstruturaDeDados.dir/build
+.PHONY : EuPossoAdivinharAEstruturaDeDados/fast
+
 RuanContest/ADHOCeAlg.Gulosos/EmBraille.obj: RuanContest/ADHOCeAlg.Gulosos/EmBraille.cpp.obj
 
 .PHONY : RuanContest/ADHOCeAlg.Gulosos/EmBraille.obj
@@ -306,6 +319,33 @@ RuanContest/EstruturadeDados/Camisetas.s: RuanContest/EstruturadeDados/Camisetas
 RuanContest/EstruturadeDados/Camisetas.cpp.s:
 	$(MAKE) -f CMakeFiles\Camisetas.dir\build.make CMakeFiles/Camisetas.dir/RuanContest/EstruturadeDados/Camisetas.cpp.s
 .PHONY : RuanContest/EstruturadeDados/Camisetas.cpp.s
+
+RuanContest/EstruturadeDados/EuPossoAdivinharAEstruturaDeDados.obj: RuanContest/EstruturadeDados/EuPossoAdivinharAEstruturaDeDados.cpp.obj
+
+.PHONY : RuanContest/EstruturadeDados/EuPossoAdivinharAEstruturaDeDados.obj
+
+# target to build an object file
+RuanContest/EstruturadeDados/EuPossoAdivinharAEstruturaDeDados.cpp.obj:
+	$(MAKE) -f CMakeFiles\EuPossoAdivinharAEstruturaDeDados.dir\build.make CMakeFiles/EuPossoAdivinharAEstruturaDeDados.dir/RuanContest/EstruturadeDados/EuPossoAdivinharAEstruturaDeDados.cpp.obj
+.PHONY : RuanContest/EstruturadeDados/EuPossoAdivinharAEstruturaDeDados.cpp.obj
+
+RuanContest/EstruturadeDados/EuPossoAdivinharAEstruturaDeDados.i: RuanContest/EstruturadeDados/EuPossoAdivinharAEstruturaDeDados.cpp.i
+
+.PHONY : RuanContest/EstruturadeDados/EuPossoAdivinharAEstruturaDeDados.i
+
+# target to preprocess a source file
+RuanContest/EstruturadeDados/EuPossoAdivinharAEstruturaDeDados.cpp.i:
+	$(MAKE) -f CMakeFiles\EuPossoAdivinharAEstruturaDeDados.dir\build.make CMakeFiles/EuPossoAdivinharAEstruturaDeDados.dir/RuanContest/EstruturadeDados/EuPossoAdivinharAEstruturaDeDados.cpp.i
+.PHONY : RuanContest/EstruturadeDados/EuPossoAdivinharAEstruturaDeDados.cpp.i
+
+RuanContest/EstruturadeDados/EuPossoAdivinharAEstruturaDeDados.s: RuanContest/EstruturadeDados/EuPossoAdivinharAEstruturaDeDados.cpp.s
+
+.PHONY : RuanContest/EstruturadeDados/EuPossoAdivinharAEstruturaDeDados.s
+
+# target to generate assembly for a file
+RuanContest/EstruturadeDados/EuPossoAdivinharAEstruturaDeDados.cpp.s:
+	$(MAKE) -f CMakeFiles\EuPossoAdivinharAEstruturaDeDados.dir\build.make CMakeFiles/EuPossoAdivinharAEstruturaDeDados.dir/RuanContest/EstruturadeDados/EuPossoAdivinharAEstruturaDeDados.cpp.s
+.PHONY : RuanContest/EstruturadeDados/EuPossoAdivinharAEstruturaDeDados.cpp.s
 
 RuanContest/EstruturadeDados/FrequenciaDeLetras.obj: RuanContest/EstruturadeDados/FrequenciaDeLetras.cpp.obj
 
@@ -484,6 +524,7 @@ help:
 	@echo ... Costa
 	@echo ... FrequenciaDeLetras
 	@echo ... Camisetas
+	@echo ... EuPossoAdivinharAEstruturaDeDados
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... RuanContest/ADHOCeAlg.Gulosos/EmBraille.obj
@@ -495,6 +536,9 @@ help:
 	@echo ... RuanContest/EstruturadeDados/Camisetas.obj
 	@echo ... RuanContest/EstruturadeDados/Camisetas.i
 	@echo ... RuanContest/EstruturadeDados/Camisetas.s
+	@echo ... RuanContest/EstruturadeDados/EuPossoAdivinharAEstruturaDeDados.obj
+	@echo ... RuanContest/EstruturadeDados/EuPossoAdivinharAEstruturaDeDados.i
+	@echo ... RuanContest/EstruturadeDados/EuPossoAdivinharAEstruturaDeDados.s
 	@echo ... RuanContest/EstruturadeDados/FrequenciaDeLetras.obj
 	@echo ... RuanContest/EstruturadeDados/FrequenciaDeLetras.i
 	@echo ... RuanContest/EstruturadeDados/FrequenciaDeLetras.s
