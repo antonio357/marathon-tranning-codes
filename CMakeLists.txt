@@ -13,3 +13,4 @@ add_executable(FrequenciaDeLetras RuanContest/EstruturadeDados/FrequenciaDeLetra
 add_executable(Camisetas RuanContest/EstruturadeDados/Camisetas.cpp)
 add_executable(IdaFeira RuanContest/EstruturadeDados/IdaFeira.cpp)
 add_executable(EuPossoAdivinharAEstruturaDeDados RuanContest/EstruturadeDados/EuPossoAdivinharAEstruturaDeDados.cpp)
+add_executable(ListaTelefonicaEconomica RuanContest/EstruturadeDados/ListaTelefonicaEconomica.cpp)

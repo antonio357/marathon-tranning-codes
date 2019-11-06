@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2019.2\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\ListaTelefonicaEconomica.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\ListaTelefonicaEconomica.dir/objects.a @CMakeFiles\ListaTelefonicaEconomica.dir\objects1.rsp
+C:\MinGW\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\ListaTelefonicaEconomica.dir/objects.a -Wl,--no-whole-archive  -o ListaTelefonicaEconomica.exe -Wl,--out-implib,libListaTelefonicaEconomica.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\ListaTelefonicaEconomica.dir\linklibs.rsp

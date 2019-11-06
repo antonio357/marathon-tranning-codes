@@ -239,6 +239,19 @@ EuPossoAdivinharAEstruturaDeDados/fast:
 	$(MAKE) -f CMakeFiles\EuPossoAdivinharAEstruturaDeDados.dir\build.make CMakeFiles/EuPossoAdivinharAEstruturaDeDados.dir/build
 .PHONY : EuPossoAdivinharAEstruturaDeDados/fast
 
+#=============================================================================
+# Target rules for targets named ListaTelefonicaEconomica
+
+# Build rule for target.
+ListaTelefonicaEconomica: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 ListaTelefonicaEconomica
+.PHONY : ListaTelefonicaEconomica
+
+# fast build rule for target.
+ListaTelefonicaEconomica/fast:
+	$(MAKE) -f CMakeFiles\ListaTelefonicaEconomica.dir\build.make CMakeFiles/ListaTelefonicaEconomica.dir/build
+.PHONY : ListaTelefonicaEconomica/fast
+
 RuanContest/ADHOCeAlg.Gulosos/EmBraille.obj: RuanContest/ADHOCeAlg.Gulosos/EmBraille.cpp.obj
 
 .PHONY : RuanContest/ADHOCeAlg.Gulosos/EmBraille.obj
@@ -401,6 +414,33 @@ RuanContest/EstruturadeDados/IdaFeira.cpp.s:
 	$(MAKE) -f CMakeFiles\IdaFeira.dir\build.make CMakeFiles/IdaFeira.dir/RuanContest/EstruturadeDados/IdaFeira.cpp.s
 .PHONY : RuanContest/EstruturadeDados/IdaFeira.cpp.s
 
+RuanContest/EstruturadeDados/ListaTelefonicaEconomica.obj: RuanContest/EstruturadeDados/ListaTelefonicaEconomica.cpp.obj
+
+.PHONY : RuanContest/EstruturadeDados/ListaTelefonicaEconomica.obj
+
+# target to build an object file
+RuanContest/EstruturadeDados/ListaTelefonicaEconomica.cpp.obj:
+	$(MAKE) -f CMakeFiles\ListaTelefonicaEconomica.dir\build.make CMakeFiles/ListaTelefonicaEconomica.dir/RuanContest/EstruturadeDados/ListaTelefonicaEconomica.cpp.obj
+.PHONY : RuanContest/EstruturadeDados/ListaTelefonicaEconomica.cpp.obj
+
+RuanContest/EstruturadeDados/ListaTelefonicaEconomica.i: RuanContest/EstruturadeDados/ListaTelefonicaEconomica.cpp.i
+
+.PHONY : RuanContest/EstruturadeDados/ListaTelefonicaEconomica.i
+
+# target to preprocess a source file
+RuanContest/EstruturadeDados/ListaTelefonicaEconomica.cpp.i:
+	$(MAKE) -f CMakeFiles\ListaTelefonicaEconomica.dir\build.make CMakeFiles/ListaTelefonicaEconomica.dir/RuanContest/EstruturadeDados/ListaTelefonicaEconomica.cpp.i
+.PHONY : RuanContest/EstruturadeDados/ListaTelefonicaEconomica.cpp.i
+
+RuanContest/EstruturadeDados/ListaTelefonicaEconomica.s: RuanContest/EstruturadeDados/ListaTelefonicaEconomica.cpp.s
+
+.PHONY : RuanContest/EstruturadeDados/ListaTelefonicaEconomica.s
+
+# target to generate assembly for a file
+RuanContest/EstruturadeDados/ListaTelefonicaEconomica.cpp.s:
+	$(MAKE) -f CMakeFiles\ListaTelefonicaEconomica.dir\build.make CMakeFiles/ListaTelefonicaEconomica.dir/RuanContest/EstruturadeDados/ListaTelefonicaEconomica.cpp.s
+.PHONY : RuanContest/EstruturadeDados/ListaTelefonicaEconomica.cpp.s
+
 RuanContest/Grafos/Costa.obj: RuanContest/Grafos/Costa.cpp.obj
 
 .PHONY : RuanContest/Grafos/Costa.obj
@@ -525,6 +565,7 @@ help:
 	@echo ... FrequenciaDeLetras
 	@echo ... Camisetas
 	@echo ... EuPossoAdivinharAEstruturaDeDados
+	@echo ... ListaTelefonicaEconomica
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... RuanContest/ADHOCeAlg.Gulosos/EmBraille.obj
@@ -545,6 +586,9 @@ help:
 	@echo ... RuanContest/EstruturadeDados/IdaFeira.obj
 	@echo ... RuanContest/EstruturadeDados/IdaFeira.i
 	@echo ... RuanContest/EstruturadeDados/IdaFeira.s
+	@echo ... RuanContest/EstruturadeDados/ListaTelefonicaEconomica.obj
+	@echo ... RuanContest/EstruturadeDados/ListaTelefonicaEconomica.i
+	@echo ... RuanContest/EstruturadeDados/ListaTelefonicaEconomica.s
 	@echo ... RuanContest/Grafos/Costa.obj
 	@echo ... RuanContest/Grafos/Costa.i
 	@echo ... RuanContest/Grafos/Costa.s

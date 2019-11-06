@@ -63,4 +63,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/FrequenciaDeLetras.dir/DependInfo.cmake"
   "CMakeFiles/Camisetas.dir/DependInfo.cmake"
   "CMakeFiles/EuPossoAdivinharAEstruturaDeDados.dir/DependInfo.cmake"
+  "CMakeFiles/ListaTelefonicaEconomica.dir/DependInfo.cmake"
   )
