@@ -1,65 +1,85 @@
 #include <iostream>
-#include <queue>
+#include <list>
 
 using namespace std;
-#define nLetters 26
 #define a 97
 #define A 65
 
 struct woodSpecie {
-    string name;
+    string name, normalizedName;
     int quant = 0;
 };
 
-void clearPriorityQueue(priority_queue<woodSpecie>* priority_queue) {
-    while (not priority_queue->empty()) {
-        priority_queue->pop();
+void addWoodSpecies(list<woodSpecie>* trees, woodSpecie tree) {
+    for (auto it = trees->begin(); it != trees->end(); ++it) {
+        if (it->name == tree.name) {
+            it->quant++;
+            return;
+        }
     }
+    trees->push_back(tree);
 }
 
-// (int)(*str)[*position]
-int nextNormalizedCharValue(const string str, string::iterator* sp) {
+string normalizedString(const string* string1) {
+    string str;
+    char c;
+    int counter = -1;
 
-}
-
-bool operator<(const string& c1, const string& c2) {
-    string::iterator c1_position, c2_position;
-
-    while (c_c1 < c1.length()) {
-        if (c1[c_c1] == ' ') c_c1++;
-        if (c2[c_c2] == ' ') c_c2++;
-        if (c1[c_c1] < a)
-        c_c1++;
-        c_c2++;
+    for (int i = 0; i < string1->length(); ++i) {
+        c = (*string1)[i];
+        if (c != ' ') {
+            if (c < a) {
+                str[++counter] = c + (a - A);
+            }
+            else str[++counter] = c;
+        }
     }
 
+    return str;
+}
+
+bool operator<(const woodSpecie& c1, const woodSpecie& c2) {
     return true;
 }
 
-void priority_queue_append(priority_queue<woodSpecie>* trees, woodSpecie tree) {
-    
+void printArray(woodSpecie* tr, int len, int total) {
+    for (int i = 0; i < len; ++i) {
+        cout << tr->name << ' ' << (total / tr->quant) << endl;
+    }
+}
+
+int compare(const void *tree1, const void *tree2) {
+    auto tr1 = (woodSpecie*)tree1;
+    auto tr2 = (woodSpecie*)tree2;
+    return (tr1->quant - tr2->quant);
 }
 
 int main() {
     int nCases;
     string input;
-    priority_queue<woodSpecie> trees;
+    list<woodSpecie> trees;
 
     cin >> nCases;
     cin.ignore(); cin.ignore(); // this is to ignore the blank line input
 
     for (int i = 0; i < nCases; ++i) {
-        clearPriorityQueue(&trees);
+        trees.clear();
 
         while (true) {
             getline(cin, input);
             if (input.length() == 0) break;
 
-            woodSpecie tree = {input, 0};
-
-            trees.push();
+            woodSpecie tree = {input, normalizedString(&input)};
+            addWoodSpecies(&trees, tree);
         }
-        clearPriorityQueue(&trees);
+
+        woodSpecie tr[trees.size()];
+        int c = -1;
+        for (auto it = trees.begin(); it != trees.end(); ++it) {
+            tr[++c] = *it;
+        }
+        qsort(tr, trees.size(), sizeof(woodSpecie), compare);
+        printArray(tr, trees.size(), 30);
         cout << endl;
     }
 
