@@ -252,6 +252,19 @@ ListaTelefonicaEconomica/fast:
 	$(MAKE) -f CMakeFiles\ListaTelefonicaEconomica.dir\build.make CMakeFiles/ListaTelefonicaEconomica.dir/build
 .PHONY : ListaTelefonicaEconomica/fast
 
+#=============================================================================
+# Target rules for targets named WoodSpecies
+
+# Build rule for target.
+WoodSpecies: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 WoodSpecies
+.PHONY : WoodSpecies
+
+# fast build rule for target.
+WoodSpecies/fast:
+	$(MAKE) -f CMakeFiles\WoodSpecies.dir\build.make CMakeFiles/WoodSpecies.dir/build
+.PHONY : WoodSpecies/fast
+
 RuanContest/ADHOCeAlg.Gulosos/EmBraille.obj: RuanContest/ADHOCeAlg.Gulosos/EmBraille.cpp.obj
 
 .PHONY : RuanContest/ADHOCeAlg.Gulosos/EmBraille.obj
@@ -441,6 +454,33 @@ RuanContest/EstruturadeDados/ListaTelefonicaEconomica.cpp.s:
 	$(MAKE) -f CMakeFiles\ListaTelefonicaEconomica.dir\build.make CMakeFiles/ListaTelefonicaEconomica.dir/RuanContest/EstruturadeDados/ListaTelefonicaEconomica.cpp.s
 .PHONY : RuanContest/EstruturadeDados/ListaTelefonicaEconomica.cpp.s
 
+RuanContest/EstruturadeDados/WoodSpecies.obj: RuanContest/EstruturadeDados/WoodSpecies.cpp.obj
+
+.PHONY : RuanContest/EstruturadeDados/WoodSpecies.obj
+
+# target to build an object file
+RuanContest/EstruturadeDados/WoodSpecies.cpp.obj:
+	$(MAKE) -f CMakeFiles\WoodSpecies.dir\build.make CMakeFiles/WoodSpecies.dir/RuanContest/EstruturadeDados/WoodSpecies.cpp.obj
+.PHONY : RuanContest/EstruturadeDados/WoodSpecies.cpp.obj
+
+RuanContest/EstruturadeDados/WoodSpecies.i: RuanContest/EstruturadeDados/WoodSpecies.cpp.i
+
+.PHONY : RuanContest/EstruturadeDados/WoodSpecies.i
+
+# target to preprocess a source file
+RuanContest/EstruturadeDados/WoodSpecies.cpp.i:
+	$(MAKE) -f CMakeFiles\WoodSpecies.dir\build.make CMakeFiles/WoodSpecies.dir/RuanContest/EstruturadeDados/WoodSpecies.cpp.i
+.PHONY : RuanContest/EstruturadeDados/WoodSpecies.cpp.i
+
+RuanContest/EstruturadeDados/WoodSpecies.s: RuanContest/EstruturadeDados/WoodSpecies.cpp.s
+
+.PHONY : RuanContest/EstruturadeDados/WoodSpecies.s
+
+# target to generate assembly for a file
+RuanContest/EstruturadeDados/WoodSpecies.cpp.s:
+	$(MAKE) -f CMakeFiles\WoodSpecies.dir\build.make CMakeFiles/WoodSpecies.dir/RuanContest/EstruturadeDados/WoodSpecies.cpp.s
+.PHONY : RuanContest/EstruturadeDados/WoodSpecies.cpp.s
+
 RuanContest/Grafos/Costa.obj: RuanContest/Grafos/Costa.cpp.obj
 
 .PHONY : RuanContest/Grafos/Costa.obj
@@ -566,6 +606,7 @@ help:
 	@echo ... Camisetas
 	@echo ... EuPossoAdivinharAEstruturaDeDados
 	@echo ... ListaTelefonicaEconomica
+	@echo ... WoodSpecies
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... RuanContest/ADHOCeAlg.Gulosos/EmBraille.obj
@@ -589,6 +630,9 @@ help:
 	@echo ... RuanContest/EstruturadeDados/ListaTelefonicaEconomica.obj
 	@echo ... RuanContest/EstruturadeDados/ListaTelefonicaEconomica.i
 	@echo ... RuanContest/EstruturadeDados/ListaTelefonicaEconomica.s
+	@echo ... RuanContest/EstruturadeDados/WoodSpecies.obj
+	@echo ... RuanContest/EstruturadeDados/WoodSpecies.i
+	@echo ... RuanContest/EstruturadeDados/WoodSpecies.s
 	@echo ... RuanContest/Grafos/Costa.obj
 	@echo ... RuanContest/Grafos/Costa.i
 	@echo ... RuanContest/Grafos/Costa.s

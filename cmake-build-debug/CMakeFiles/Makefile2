@@ -471,6 +471,43 @@ clean: CMakeFiles/ListaTelefonicaEconomica.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/WoodSpecies.dir
+
+# All Build rule for target.
+CMakeFiles/WoodSpecies.dir/all:
+	$(MAKE) -f CMakeFiles\WoodSpecies.dir\build.make CMakeFiles/WoodSpecies.dir/depend
+	$(MAKE) -f CMakeFiles\WoodSpecies.dir\build.make CMakeFiles/WoodSpecies.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=23,24 "Built target WoodSpecies"
+.PHONY : CMakeFiles/WoodSpecies.dir/all
+
+# Include target in all.
+all: CMakeFiles/WoodSpecies.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/WoodSpecies.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles 2
+	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/WoodSpecies.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/WoodSpecies.dir/rule
+
+# Convenience name for target.
+WoodSpecies: CMakeFiles/WoodSpecies.dir/rule
+
+.PHONY : WoodSpecies
+
+# clean rule for target.
+CMakeFiles/WoodSpecies.dir/clean:
+	$(MAKE) -f CMakeFiles\WoodSpecies.dir\build.make CMakeFiles/WoodSpecies.dir/clean
+.PHONY : CMakeFiles/WoodSpecies.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/WoodSpecies.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Special targets to cleanup operation of make.
 
 # Special rule to run CMake to check the build system integrity.
