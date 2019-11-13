@@ -61,28 +61,16 @@ int compare(const void *tree1, const void *tree2) {
     auto tr2 = (woodSpecie*)tree2;
     woodSpecie trr1 = *tr1;
     woodSpecie trr2 = *tr2;
-    int ctr1 = 0, ctr2 = 0, dif;
-
-    cout << trr2.normalizedName << ", " << trr1.normalizedName << endl;
+    int counter = 0, dif;
 
     while (true) {
-        dif = trr2.normalizedName[ctr2] - trr1.normalizedName[ctr1];
-        cout << "dif = " << trr2.normalizedName[ctr2] << " - " << trr1.normalizedName[ctr1] << endl;
-        ctr1++; ctr2++;
+        cout << "dif = " << trr1.normalizedName[counter] << " - " << trr2.normalizedName[counter] << endl;
+        dif = trr1.normalizedName[counter] - trr2.normalizedName[counter];
+        counter++;
 
-        if (dif != 0) {
-            cout << "ok dif = " << dif << endl;
-            if (dif < 0) return 1;
-            if (dif > 0) return -1;
-        }
-        if (ctr1 == trr1.normalizedName.length()) {
-            cout << "not dif" << endl;
-            return 0;
-        }
-        if (ctr2 == trr2.normalizedName.length()) {
-            cout << "not dif" << endl;
-            return 1;
-        }
+        if (dif != 0) return dif;
+        if (counter == trr1.normalizedName.length()) return -1;
+        if (counter == trr2.normalizedName.length()) return 1;
     }
 }
 
@@ -119,7 +107,7 @@ int main() {
 
         woodSpecie tr[trees.size()];
         convertListArray(&trees, tr);
-        qsort(tr, 3, sizeof(woodSpecie), compare);
+        qsort(tr, trees.size(), sizeof(woodSpecie), compare);
         printArray(tr, trees.size(), total);
     }
     return 0;

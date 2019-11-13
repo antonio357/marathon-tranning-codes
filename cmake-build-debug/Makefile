@@ -265,6 +265,19 @@ WoodSpecies/fast:
 	$(MAKE) -f CMakeFiles\WoodSpecies.dir\build.make CMakeFiles/WoodSpecies.dir/build
 .PHONY : WoodSpecies/fast
 
+#=============================================================================
+# Target rules for targets named Testing_qsort
+
+# Build rule for target.
+Testing_qsort: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 Testing_qsort
+.PHONY : Testing_qsort
+
+# fast build rule for target.
+Testing_qsort/fast:
+	$(MAKE) -f CMakeFiles\Testing_qsort.dir\build.make CMakeFiles/Testing_qsort.dir/build
+.PHONY : Testing_qsort/fast
+
 RuanContest/ADHOCeAlg.Gulosos/EmBraille.obj: RuanContest/ADHOCeAlg.Gulosos/EmBraille.cpp.obj
 
 .PHONY : RuanContest/ADHOCeAlg.Gulosos/EmBraille.obj
@@ -535,6 +548,33 @@ RuanContest/Grafos/MapaDoMeistre.cpp.s:
 	$(MAKE) -f CMakeFiles\MapaDoMeistre.dir\build.make CMakeFiles/MapaDoMeistre.dir/RuanContest/Grafos/MapaDoMeistre.cpp.s
 .PHONY : RuanContest/Grafos/MapaDoMeistre.cpp.s
 
+TestingBasicCodes/Testing_qsort.obj: TestingBasicCodes/Testing_qsort.cpp.obj
+
+.PHONY : TestingBasicCodes/Testing_qsort.obj
+
+# target to build an object file
+TestingBasicCodes/Testing_qsort.cpp.obj:
+	$(MAKE) -f CMakeFiles\Testing_qsort.dir\build.make CMakeFiles/Testing_qsort.dir/TestingBasicCodes/Testing_qsort.cpp.obj
+.PHONY : TestingBasicCodes/Testing_qsort.cpp.obj
+
+TestingBasicCodes/Testing_qsort.i: TestingBasicCodes/Testing_qsort.cpp.i
+
+.PHONY : TestingBasicCodes/Testing_qsort.i
+
+# target to preprocess a source file
+TestingBasicCodes/Testing_qsort.cpp.i:
+	$(MAKE) -f CMakeFiles\Testing_qsort.dir\build.make CMakeFiles/Testing_qsort.dir/TestingBasicCodes/Testing_qsort.cpp.i
+.PHONY : TestingBasicCodes/Testing_qsort.cpp.i
+
+TestingBasicCodes/Testing_qsort.s: TestingBasicCodes/Testing_qsort.cpp.s
+
+.PHONY : TestingBasicCodes/Testing_qsort.s
+
+# target to generate assembly for a file
+TestingBasicCodes/Testing_qsort.cpp.s:
+	$(MAKE) -f CMakeFiles\Testing_qsort.dir\build.make CMakeFiles/Testing_qsort.dir/TestingBasicCodes/Testing_qsort.cpp.s
+.PHONY : TestingBasicCodes/Testing_qsort.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -607,6 +647,7 @@ help:
 	@echo ... EuPossoAdivinharAEstruturaDeDados
 	@echo ... ListaTelefonicaEconomica
 	@echo ... WoodSpecies
+	@echo ... Testing_qsort
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... RuanContest/ADHOCeAlg.Gulosos/EmBraille.obj
@@ -639,6 +680,9 @@ help:
 	@echo ... RuanContest/Grafos/MapaDoMeistre.obj
 	@echo ... RuanContest/Grafos/MapaDoMeistre.i
 	@echo ... RuanContest/Grafos/MapaDoMeistre.s
+	@echo ... TestingBasicCodes/Testing_qsort.obj
+	@echo ... TestingBasicCodes/Testing_qsort.i
+	@echo ... TestingBasicCodes/Testing_qsort.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
