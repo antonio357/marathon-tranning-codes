@@ -42,13 +42,15 @@ string normalizedString(const string* string1) {
 //    return true;
 //}
 
-void printArray(woodSpecie* tr, int len, int total) {
+void printArray(const woodSpecie* tr, int len, int total) {
+    double percentage;
     for (int i = 0; i < len; ++i) {
-        cout << tr->name << ' ' << (total / tr->quant) << endl;
-    }
+        percentage = (tr[i].quant * 100.0/total);
+        cout << tr[i].name << ' ' << percentage << endl;
+    } cout << endl;
 }
 
-void printList(list<woodSpecie>* trees) {
+void printList(const list<woodSpecie>* trees) {
     for (auto it = trees->begin(); it != trees->end(); ++it) {
         cout << it->name << ' ' << it->normalizedName << ' ' << it->quant << ", ";
     } cout << endl;
@@ -57,11 +59,46 @@ void printList(list<woodSpecie>* trees) {
 int compare(const void *tree1, const void *tree2) {
     auto tr1 = (woodSpecie*)tree1;
     auto tr2 = (woodSpecie*)tree2;
-    return (tr1->quant - tr2->quant);
+    woodSpecie trr1 = *tr1;
+    woodSpecie trr2 = *tr2;
+    int ctr1 = 0, ctr2 = 0, dif;
+
+    cout << trr2.normalizedName << ", " << trr1.normalizedName << endl;
+
+    while (true) {
+        dif = trr2.normalizedName[ctr2] - trr1.normalizedName[ctr1];
+        cout << "dif = " << trr2.normalizedName[ctr2] << " - " << trr1.normalizedName[ctr1] << endl;
+        ctr1++; ctr2++;
+
+        if (dif != 0) {
+            cout << "ok dif = " << dif << endl;
+            if (dif < 0) return 1;
+            if (dif > 0) return -1;
+        }
+        if (ctr1 == trr1.normalizedName.length()) {
+            cout << "not dif" << endl;
+            return 0;
+        }
+        if (ctr2 == trr2.normalizedName.length()) {
+            cout << "not dif" << endl;
+            return 1;
+        }
+    }
+}
+
+woodSpecie* convertListArray(const list<woodSpecie>* trees, woodSpecie* tr) {
+    int c = 0;
+
+    for (auto it = trees->begin(); it != trees->end(); ++it) {
+        tr[c] = *it;
+        c++;
+    }
+
+    return tr;
 }
 
 int main() {
-    int nCases;
+    int nCases, total;
     string input;
     list<woodSpecie> trees;
 
@@ -70,26 +107,21 @@ int main() {
 
     for (int i = 0; i < nCases; ++i) {
         trees.clear();
+        total = 0;
 
         while (true) {
             getline(cin, input);
             if (input.length() == 0) break;
 
             woodSpecie tree = {input, normalizedString(&input), 1};
-            addWoodSpecies(&trees, tree);
+            addWoodSpecies(&trees, tree); total++;
         }
-        printList(&trees);
-        woodSpecie tr[trees.size()];
-        int c = 0;
-        for (auto it = trees.begin(); it != trees.end(); ++it) {
-            tr[c] = (*it);
-            c++;
-        }
-//        qsort(tr, trees.size(), sizeof(woodSpecie), compare);
-        printArray(tr, trees.size(), 30);
-        cout << endl;
-    }
 
+        woodSpecie tr[trees.size()];
+        convertListArray(&trees, tr);
+        qsort(tr, 3, sizeof(woodSpecie), compare);
+        printArray(tr, trees.size(), total);
+    }
     return 0;
 }
 
