@@ -7,7 +7,7 @@ using namespace std;
 
 struct woodSpecie {
     string name, normalizedName;
-    int quant = 0;
+    int quant = 1;
 };
 
 void addWoodSpecies(list<woodSpecie>* trees, woodSpecie tree) {
@@ -23,29 +23,35 @@ void addWoodSpecies(list<woodSpecie>* trees, woodSpecie tree) {
 string normalizedString(const string* string1) {
     string str;
     char c;
-    int counter = -1;
 
     for (int i = 0; i < string1->length(); ++i) {
         c = (*string1)[i];
+
         if (c != ' ') {
             if (c < a) {
-                str[++counter] = c + (a - A);
+                str.push_back(c + (a - A));
             }
-            else str[++counter] = c;
+            else str.push_back(c);
         }
     }
 
     return str;
 }
 
-bool operator<(const woodSpecie& c1, const woodSpecie& c2) {
-    return true;
-}
+//bool operator<(const woodSpecie& c1, const woodSpecie& c2) {
+//    return true;
+//}
 
 void printArray(woodSpecie* tr, int len, int total) {
     for (int i = 0; i < len; ++i) {
         cout << tr->name << ' ' << (total / tr->quant) << endl;
     }
+}
+
+void printList(list<woodSpecie>* trees) {
+    for (auto it = trees->begin(); it != trees->end(); ++it) {
+        cout << it->name << ' ' << it->normalizedName << ' ' << it->quant << ", ";
+    } cout << endl;
 }
 
 int compare(const void *tree1, const void *tree2) {
@@ -69,16 +75,17 @@ int main() {
             getline(cin, input);
             if (input.length() == 0) break;
 
-            woodSpecie tree = {input, normalizedString(&input)};
+            woodSpecie tree = {input, normalizedString(&input), 1};
             addWoodSpecies(&trees, tree);
         }
-
+        printList(&trees);
         woodSpecie tr[trees.size()];
-        int c = -1;
+        int c = 0;
         for (auto it = trees.begin(); it != trees.end(); ++it) {
-            tr[++c] = *it;
+            tr[c] = (*it);
+            c++;
         }
-        qsort(tr, trees.size(), sizeof(woodSpecie), compare);
+//        qsort(tr, trees.size(), sizeof(woodSpecie), compare);
         printArray(tr, trees.size(), 30);
         cout << endl;
     }
