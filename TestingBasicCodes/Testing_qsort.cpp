@@ -39,7 +39,7 @@ int main() {
         if (i == size - 1) cout << strArray[i];
 
         else cout << strArray[i] << ", ";
-    } 
+    }
     cout << ']' << endl;
     return 0;
 }
