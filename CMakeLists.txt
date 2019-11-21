@@ -16,3 +16,5 @@ add_executable(EuPossoAdivinharAEstruturaDeDados RuanContest/EstruturadeDados/Eu
 add_executable(ListaTelefonicaEconomica RuanContest/EstruturadeDados/ListaTelefonicaEconomica.cpp)
 add_executable(WoodSpecies RuanContest/EstruturadeDados/WoodSpecies.cpp)
 add_executable(Testing_qsort TestingBasicCodes/Testing_qsort.cpp)
+add_executable(TestingFunctionParameter TestingBasicCodes/TestingFunctionParameter.c)
+add_executable(SpursRocks RuanContest/EstruturadeDados/SpursRocks.cpp)

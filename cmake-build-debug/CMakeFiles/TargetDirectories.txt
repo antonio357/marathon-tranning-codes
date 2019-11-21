@@ -11,5 +11,7 @@ C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/CMakeFiles/EuPoss
 C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/CMakeFiles/ListaTelefonicaEconomica.dir
 C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/CMakeFiles/WoodSpecies.dir
 C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/CMakeFiles/Testing_qsort.dir
+C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/CMakeFiles/TestingFunctionParameter.dir
+C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/CMakeFiles/SpursRocks.dir
 C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/CMakeFiles/edit_cache.dir
 C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/CMakeFiles/rebuild_cache.dir

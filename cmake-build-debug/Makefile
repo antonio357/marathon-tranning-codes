@@ -278,6 +278,32 @@ Testing_qsort/fast:
 	$(MAKE) -f CMakeFiles\Testing_qsort.dir\build.make CMakeFiles/Testing_qsort.dir/build
 .PHONY : Testing_qsort/fast
 
+#=============================================================================
+# Target rules for targets named TestingFunctionParameter
+
+# Build rule for target.
+TestingFunctionParameter: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 TestingFunctionParameter
+.PHONY : TestingFunctionParameter
+
+# fast build rule for target.
+TestingFunctionParameter/fast:
+	$(MAKE) -f CMakeFiles\TestingFunctionParameter.dir\build.make CMakeFiles/TestingFunctionParameter.dir/build
+.PHONY : TestingFunctionParameter/fast
+
+#=============================================================================
+# Target rules for targets named SpursRocks
+
+# Build rule for target.
+SpursRocks: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 SpursRocks
+.PHONY : SpursRocks
+
+# fast build rule for target.
+SpursRocks/fast:
+	$(MAKE) -f CMakeFiles\SpursRocks.dir\build.make CMakeFiles/SpursRocks.dir/build
+.PHONY : SpursRocks/fast
+
 RuanContest/ADHOCeAlg.Gulosos/EmBraille.obj: RuanContest/ADHOCeAlg.Gulosos/EmBraille.cpp.obj
 
 .PHONY : RuanContest/ADHOCeAlg.Gulosos/EmBraille.obj
@@ -467,6 +493,33 @@ RuanContest/EstruturadeDados/ListaTelefonicaEconomica.cpp.s:
 	$(MAKE) -f CMakeFiles\ListaTelefonicaEconomica.dir\build.make CMakeFiles/ListaTelefonicaEconomica.dir/RuanContest/EstruturadeDados/ListaTelefonicaEconomica.cpp.s
 .PHONY : RuanContest/EstruturadeDados/ListaTelefonicaEconomica.cpp.s
 
+RuanContest/EstruturadeDados/SpursRocks.obj: RuanContest/EstruturadeDados/SpursRocks.cpp.obj
+
+.PHONY : RuanContest/EstruturadeDados/SpursRocks.obj
+
+# target to build an object file
+RuanContest/EstruturadeDados/SpursRocks.cpp.obj:
+	$(MAKE) -f CMakeFiles\SpursRocks.dir\build.make CMakeFiles/SpursRocks.dir/RuanContest/EstruturadeDados/SpursRocks.cpp.obj
+.PHONY : RuanContest/EstruturadeDados/SpursRocks.cpp.obj
+
+RuanContest/EstruturadeDados/SpursRocks.i: RuanContest/EstruturadeDados/SpursRocks.cpp.i
+
+.PHONY : RuanContest/EstruturadeDados/SpursRocks.i
+
+# target to preprocess a source file
+RuanContest/EstruturadeDados/SpursRocks.cpp.i:
+	$(MAKE) -f CMakeFiles\SpursRocks.dir\build.make CMakeFiles/SpursRocks.dir/RuanContest/EstruturadeDados/SpursRocks.cpp.i
+.PHONY : RuanContest/EstruturadeDados/SpursRocks.cpp.i
+
+RuanContest/EstruturadeDados/SpursRocks.s: RuanContest/EstruturadeDados/SpursRocks.cpp.s
+
+.PHONY : RuanContest/EstruturadeDados/SpursRocks.s
+
+# target to generate assembly for a file
+RuanContest/EstruturadeDados/SpursRocks.cpp.s:
+	$(MAKE) -f CMakeFiles\SpursRocks.dir\build.make CMakeFiles/SpursRocks.dir/RuanContest/EstruturadeDados/SpursRocks.cpp.s
+.PHONY : RuanContest/EstruturadeDados/SpursRocks.cpp.s
+
 RuanContest/EstruturadeDados/WoodSpecies.obj: RuanContest/EstruturadeDados/WoodSpecies.cpp.obj
 
 .PHONY : RuanContest/EstruturadeDados/WoodSpecies.obj
@@ -547,6 +600,33 @@ RuanContest/Grafos/MapaDoMeistre.s: RuanContest/Grafos/MapaDoMeistre.cpp.s
 RuanContest/Grafos/MapaDoMeistre.cpp.s:
 	$(MAKE) -f CMakeFiles\MapaDoMeistre.dir\build.make CMakeFiles/MapaDoMeistre.dir/RuanContest/Grafos/MapaDoMeistre.cpp.s
 .PHONY : RuanContest/Grafos/MapaDoMeistre.cpp.s
+
+TestingBasicCodes/TestingFunctionParameter.obj: TestingBasicCodes/TestingFunctionParameter.c.obj
+
+.PHONY : TestingBasicCodes/TestingFunctionParameter.obj
+
+# target to build an object file
+TestingBasicCodes/TestingFunctionParameter.c.obj:
+	$(MAKE) -f CMakeFiles\TestingFunctionParameter.dir\build.make CMakeFiles/TestingFunctionParameter.dir/TestingBasicCodes/TestingFunctionParameter.c.obj
+.PHONY : TestingBasicCodes/TestingFunctionParameter.c.obj
+
+TestingBasicCodes/TestingFunctionParameter.i: TestingBasicCodes/TestingFunctionParameter.c.i
+
+.PHONY : TestingBasicCodes/TestingFunctionParameter.i
+
+# target to preprocess a source file
+TestingBasicCodes/TestingFunctionParameter.c.i:
+	$(MAKE) -f CMakeFiles\TestingFunctionParameter.dir\build.make CMakeFiles/TestingFunctionParameter.dir/TestingBasicCodes/TestingFunctionParameter.c.i
+.PHONY : TestingBasicCodes/TestingFunctionParameter.c.i
+
+TestingBasicCodes/TestingFunctionParameter.s: TestingBasicCodes/TestingFunctionParameter.c.s
+
+.PHONY : TestingBasicCodes/TestingFunctionParameter.s
+
+# target to generate assembly for a file
+TestingBasicCodes/TestingFunctionParameter.c.s:
+	$(MAKE) -f CMakeFiles\TestingFunctionParameter.dir\build.make CMakeFiles/TestingFunctionParameter.dir/TestingBasicCodes/TestingFunctionParameter.c.s
+.PHONY : TestingBasicCodes/TestingFunctionParameter.c.s
 
 TestingBasicCodes/Testing_qsort.obj: TestingBasicCodes/Testing_qsort.cpp.obj
 
@@ -648,6 +728,8 @@ help:
 	@echo ... ListaTelefonicaEconomica
 	@echo ... WoodSpecies
 	@echo ... Testing_qsort
+	@echo ... TestingFunctionParameter
+	@echo ... SpursRocks
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... RuanContest/ADHOCeAlg.Gulosos/EmBraille.obj
@@ -671,6 +753,9 @@ help:
 	@echo ... RuanContest/EstruturadeDados/ListaTelefonicaEconomica.obj
 	@echo ... RuanContest/EstruturadeDados/ListaTelefonicaEconomica.i
 	@echo ... RuanContest/EstruturadeDados/ListaTelefonicaEconomica.s
+	@echo ... RuanContest/EstruturadeDados/SpursRocks.obj
+	@echo ... RuanContest/EstruturadeDados/SpursRocks.i
+	@echo ... RuanContest/EstruturadeDados/SpursRocks.s
 	@echo ... RuanContest/EstruturadeDados/WoodSpecies.obj
 	@echo ... RuanContest/EstruturadeDados/WoodSpecies.i
 	@echo ... RuanContest/EstruturadeDados/WoodSpecies.s
@@ -680,6 +765,9 @@ help:
 	@echo ... RuanContest/Grafos/MapaDoMeistre.obj
 	@echo ... RuanContest/Grafos/MapaDoMeistre.i
 	@echo ... RuanContest/Grafos/MapaDoMeistre.s
+	@echo ... TestingBasicCodes/TestingFunctionParameter.obj
+	@echo ... TestingBasicCodes/TestingFunctionParameter.i
+	@echo ... TestingBasicCodes/TestingFunctionParameter.s
 	@echo ... TestingBasicCodes/Testing_qsort.obj
 	@echo ... TestingBasicCodes/Testing_qsort.i
 	@echo ... TestingBasicCodes/Testing_qsort.s
