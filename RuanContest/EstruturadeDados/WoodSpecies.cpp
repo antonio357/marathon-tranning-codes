@@ -1,5 +1,4 @@
 #include <iostream>
-#include <list>
 #include <map>
 
 using namespace std;
@@ -12,9 +11,9 @@ struct woodSpecie {
 };
 
 void addWoodSpecie(map<string, woodSpecie>* trees, woodSpecie tree) {
-    auto it = trees->find(tree.normalizedName);
+    auto it = trees->find(tree.name);
     if (it == trees->end())
-        trees->insert(pair<string, woodSpecie>(tree.normalizedName, tree));
+        trees->insert(pair <string, woodSpecie> (tree.name, tree));
     else it->second.quant++;
 }
 
@@ -32,7 +31,6 @@ string normalizedString(const string* string1) {
             else str.push_back(c);
         }
     }
-
     return str;
 }
 
@@ -45,7 +43,7 @@ double totalTrees(const map<string, woodSpecie>* trees) {
     return counter;
 }
 
-void printWoodSpecies(const map<string, woodSpecie>* trees) {
+void printWoodSpecies(const map <string, woodSpecie>* trees) {
     double percentage;
     double total = totalTrees(trees);
     cout.precision(4);
@@ -55,7 +53,7 @@ void printWoodSpecies(const map<string, woodSpecie>* trees) {
 
         cout << it->second.name << ' ';
         cout << fixed << percentage << endl; // printf("%.4lf\n", percentage);
-    } cout << endl;
+    }
 }
 
 int main() {
@@ -64,7 +62,8 @@ int main() {
     map<string, woodSpecie> trees;
 
     cin >> nCases;
-    cin.ignore(); cin.ignore(); // this is to ignore the blank line input
+    getline(cin, input); // this is to ignore the blank line input
+    cin.ignore();
 
     for (int i = 0; i < nCases; ++i) {
         trees.clear();
@@ -77,6 +76,7 @@ int main() {
             addWoodSpecie(&trees, tree);
         }
 
+        if (i > 0) cout << endl;
         printWoodSpecies(&trees);
     }
     return 0;
