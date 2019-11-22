@@ -6,8 +6,9 @@
 using namespace std;
 
 struct match_score {
-    int total_points;
+    int points_made;
     int win_lose_points;
+    int points_received;
 };
 
 struct team {
@@ -36,17 +37,12 @@ bool operator<(const team& t1, const team& t2) {
 }
 
 void validateMatchInput(map <int, team>* teams, int team_id, match_score score) {
-//    cout << "team_id = " << team_id << endl;
-//    cout << "total_points = " << score.total_points << endl;
-//    cout << "win_lose_points = " << score.win_lose_points << endl;
-
     auto t_p = teams->find(team_id);
 
     if (t_p != teams->end()) { // team exits
         t_p->second.scores.push_back(score);
     }
     else { // team does not exist
-//        cout << "here" << endl;
         team new_team;
         new_team.team_id = team_id;
         new_team.scores.push_back(score);
@@ -63,17 +59,28 @@ int TeamWinLosePoints(team* t) {
     return total;
 }
 
+double teamAverageScore(team* t) {
+    double total = 0;
+
+    for (auto it = t->scores.begin(); it != t->scores.end() ; ++it) {
+        total += it->points_received;
+    }
+
+    if (total == 0) return (double) t->total_score;
+    else return ((double) t->total_score) / total;
+}
+
 int TeamTotalPoints(team* t) {
     int total = 0;
 
     for (auto it = t->scores.begin(); it != t->scores.end() ; ++it) {
-        total += it->total_points;
+        total += it->points_made;
     }
     return total;
 }
 
 void print(priority_queue <team>* sorted_teams, int* instance_counter) {
-//    if (*instance_counter > 0) cout << endl;
+    if (*instance_counter > 0) cout << endl;
     (*instance_counter)++;
     cout << "Instancia " << *instance_counter << endl;
 
@@ -81,14 +88,14 @@ void print(priority_queue <team>* sorted_teams, int* instance_counter) {
         cout << sorted_teams->top().team_id;
         if (sorted_teams->size() > 1) cout << ' ';
         sorted_teams->pop();
-    } cout << endl << endl;
+    } cout << endl;
 }
 
 void sort(map <int, team>* teams, priority_queue <team>* sorted_teams) {
     for (auto it = teams->begin(); it != teams->end() ; ++it) {
         it->second.total_score = TeamTotalPoints(&(it->second));
         it->second.win_lose_score = TeamWinLosePoints(&(it->second));
-        it->second.average_score = (double) (it->second.total_score) / (double) (it->second.win_lose_score);
+        it->second.average_score = teamAverageScore(&(it->second));
         it->second.subs_num = it->second.scores.size();
         sorted_teams->push(it->second);
     } teams->clear();
@@ -106,8 +113,8 @@ int main() {
         for (int i = 0; i < n * (n - 1) / 2; ++i) {
             cin >> x >> y >> z >> w;
 
-            match_score x_score = {y, 1};
-            match_score z_score = {w, 1};
+            match_score x_score = {y, 1, w};
+            match_score z_score = {w, 1, y};
 
             // deciding how wins
             if (y > w) { // x wins
