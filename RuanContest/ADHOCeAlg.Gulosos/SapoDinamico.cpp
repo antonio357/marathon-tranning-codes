@@ -1,4 +1,4 @@
-#include<iostream> 
+#include<iostream>
 #include<fstream>
 
 using namespace std;
@@ -27,7 +27,7 @@ int biggerSmallestJump(Pedra* pedras, int lengthPedras) {
         std::cout << pedras[i].distMargenEsq << endl;
         std::cout << pedras[i].tipo << endl;
         std::cout << pedras[i].podePular << endl << endl;
-    }*/  
+    }*/
     // verificando se a entrada esta correta
     int bigger = 0;
     int value;
@@ -38,14 +38,31 @@ int biggerSmallestJump(Pedra* pedras, int lengthPedras) {
     while (indo < ultimoIndex) {
         pedraAtual = pedras[indo];
         pedraSeguinte = pedras[indo + 1];
-        if (pedraSeguinte.tipo == big) {
+        /*if (pedraSeguinte.tipo == big) {
             indo++;
             value = pular(&pedraAtual, &pedras[indo]);
         }
         else if (pedraSeguinte.tipo == small) {
             indo += 2;
             value = pular(&pedraAtual, &pedras[indo]);
+        }*/
+        // new try
+        if (pedraAtual.tipo == big) {
+            indo++;
+            value = pular(&pedraAtual, &pedras[indo]);
         }
+        else if (pedraAtual.tipo == small) {
+            if (pedraSeguinte.tipo == big) {
+                indo++;
+                value = pular(&pedraAtual, &pedras[indo]);
+            }
+            else if (pedraSeguinte.tipo == small) {
+                indo += 2;
+                value = pular(&pedraAtual, &pedras[indo]);
+            }
+        }
+
+        // new try
         if (value < 0) std::cout << "deu merda" << endl;
         else if (value > bigger) bigger = value;
     }
@@ -54,7 +71,7 @@ int biggerSmallestJump(Pedra* pedras, int lengthPedras) {
     while (voltando > 0) {
         pedraAtual = pedras[voltando];
         pedraSeguinte = pedras[voltando - 1];
-        if (pedraSeguinte.tipo == big) {
+        /*if (pedraSeguinte.tipo == big) {
             voltando--;
             value = pular(&pedraAtual, &pedras[voltando]);
         }
@@ -67,7 +84,17 @@ int biggerSmallestJump(Pedra* pedras, int lengthPedras) {
                 voltando -= 2;
                 value = pular(&pedraAtual, &pedras[voltando]);
             }
+        }*/
+        //new try
+        if (pedraSeguinte.podePular == true) {
+            voltando -= 1;
+            value = pular(&pedraAtual, &pedras[voltando]);
         }
+        else if (pedraSeguinte.podePular == false) {
+            voltando -= 2;
+            value = pular(&pedraAtual, &pedras[voltando]);
+        }
+        //new try
         if (value < 0) std::cout << "deu merda" << endl;
         else if (value > bigger) bigger = value;
     }
@@ -75,8 +102,8 @@ int biggerSmallestJump(Pedra* pedras, int lengthPedras) {
 }
 
 int main() {
-    ofstream file__; // comentar antes de enviar
-    file__.open("txtsFiles\\output");
+    // ofstream file__; // comentar antes de enviar
+    // file__.open("txtsFiles\\output"); // comentar antes de enviar
     int nCasos, counterCasos = 0, resposta;
     int nPedras, difMargens, numCounter, inputCounter;
     string* input;
@@ -118,8 +145,8 @@ int main() {
         // for para setar todas as pedras das entradas
         resposta = biggerSmallestJump(pedras, nPedras + 2);
         std::cout << "Case " << ++counterCasos << ": " << resposta << endl;
-        file__ << "Case " << counterCasos << ": " << resposta << endl; // comentar antes de enviar
+        // file__ << "Case " << counterCasos << ": " << resposta << endl; // comentar antes de enviar
     }
-    file__.close(); // comentar antes de enviar
+    // file__.close(); // comentar antes de enviar
     return 0;
 }

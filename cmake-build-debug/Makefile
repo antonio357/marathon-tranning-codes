@@ -304,6 +304,19 @@ SpursRocks/fast:
 	$(MAKE) -f CMakeFiles\SpursRocks.dir\build.make CMakeFiles/SpursRocks.dir/build
 .PHONY : SpursRocks/fast
 
+#=============================================================================
+# Target rules for targets named SapoDinamico
+
+# Build rule for target.
+SapoDinamico: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 SapoDinamico
+.PHONY : SapoDinamico
+
+# fast build rule for target.
+SapoDinamico/fast:
+	$(MAKE) -f CMakeFiles\SapoDinamico.dir\build.make CMakeFiles/SapoDinamico.dir/build
+.PHONY : SapoDinamico/fast
+
 RuanContest/ADHOCeAlg.Gulosos/EmBraille.obj: RuanContest/ADHOCeAlg.Gulosos/EmBraille.cpp.obj
 
 .PHONY : RuanContest/ADHOCeAlg.Gulosos/EmBraille.obj
@@ -330,6 +343,33 @@ RuanContest/ADHOCeAlg.Gulosos/EmBraille.s: RuanContest/ADHOCeAlg.Gulosos/EmBrail
 RuanContest/ADHOCeAlg.Gulosos/EmBraille.cpp.s:
 	$(MAKE) -f CMakeFiles\EmBraille.dir\build.make CMakeFiles/EmBraille.dir/RuanContest/ADHOCeAlg.Gulosos/EmBraille.cpp.s
 .PHONY : RuanContest/ADHOCeAlg.Gulosos/EmBraille.cpp.s
+
+RuanContest/ADHOCeAlg.Gulosos/SapoDinamico.obj: RuanContest/ADHOCeAlg.Gulosos/SapoDinamico.cpp.obj
+
+.PHONY : RuanContest/ADHOCeAlg.Gulosos/SapoDinamico.obj
+
+# target to build an object file
+RuanContest/ADHOCeAlg.Gulosos/SapoDinamico.cpp.obj:
+	$(MAKE) -f CMakeFiles\SapoDinamico.dir\build.make CMakeFiles/SapoDinamico.dir/RuanContest/ADHOCeAlg.Gulosos/SapoDinamico.cpp.obj
+.PHONY : RuanContest/ADHOCeAlg.Gulosos/SapoDinamico.cpp.obj
+
+RuanContest/ADHOCeAlg.Gulosos/SapoDinamico.i: RuanContest/ADHOCeAlg.Gulosos/SapoDinamico.cpp.i
+
+.PHONY : RuanContest/ADHOCeAlg.Gulosos/SapoDinamico.i
+
+# target to preprocess a source file
+RuanContest/ADHOCeAlg.Gulosos/SapoDinamico.cpp.i:
+	$(MAKE) -f CMakeFiles\SapoDinamico.dir\build.make CMakeFiles/SapoDinamico.dir/RuanContest/ADHOCeAlg.Gulosos/SapoDinamico.cpp.i
+.PHONY : RuanContest/ADHOCeAlg.Gulosos/SapoDinamico.cpp.i
+
+RuanContest/ADHOCeAlg.Gulosos/SapoDinamico.s: RuanContest/ADHOCeAlg.Gulosos/SapoDinamico.cpp.s
+
+.PHONY : RuanContest/ADHOCeAlg.Gulosos/SapoDinamico.s
+
+# target to generate assembly for a file
+RuanContest/ADHOCeAlg.Gulosos/SapoDinamico.cpp.s:
+	$(MAKE) -f CMakeFiles\SapoDinamico.dir\build.make CMakeFiles/SapoDinamico.dir/RuanContest/ADHOCeAlg.Gulosos/SapoDinamico.cpp.s
+.PHONY : RuanContest/ADHOCeAlg.Gulosos/SapoDinamico.cpp.s
 
 RuanContest/EstruturadeDados/BalancoDeParentesis.obj: RuanContest/EstruturadeDados/BalancoDeParentesis.cpp.obj
 
@@ -730,11 +770,15 @@ help:
 	@echo ... Testing_qsort
 	@echo ... TestingFunctionParameter
 	@echo ... SpursRocks
+	@echo ... SapoDinamico
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... RuanContest/ADHOCeAlg.Gulosos/EmBraille.obj
 	@echo ... RuanContest/ADHOCeAlg.Gulosos/EmBraille.i
 	@echo ... RuanContest/ADHOCeAlg.Gulosos/EmBraille.s
+	@echo ... RuanContest/ADHOCeAlg.Gulosos/SapoDinamico.obj
+	@echo ... RuanContest/ADHOCeAlg.Gulosos/SapoDinamico.i
+	@echo ... RuanContest/ADHOCeAlg.Gulosos/SapoDinamico.s
 	@echo ... RuanContest/EstruturadeDados/BalancoDeParentesis.obj
 	@echo ... RuanContest/EstruturadeDados/BalancoDeParentesis.i
 	@echo ... RuanContest/EstruturadeDados/BalancoDeParentesis.s

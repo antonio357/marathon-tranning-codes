@@ -68,4 +68,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/Testing_qsort.dir/DependInfo.cmake"
   "CMakeFiles/TestingFunctionParameter.dir/DependInfo.cmake"
   "CMakeFiles/SpursRocks.dir/DependInfo.cmake"
+  "CMakeFiles/SapoDinamico.dir/DependInfo.cmake"
   )

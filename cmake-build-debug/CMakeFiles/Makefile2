@@ -477,7 +477,7 @@ clean: CMakeFiles/ListaTelefonicaEconomica.dir/clean
 CMakeFiles/WoodSpecies.dir/all:
 	$(MAKE) -f CMakeFiles\WoodSpecies.dir\build.make CMakeFiles/WoodSpecies.dir/depend
 	$(MAKE) -f CMakeFiles\WoodSpecies.dir\build.make CMakeFiles/WoodSpecies.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=29,30 "Built target WoodSpecies"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=31,32 "Built target WoodSpecies"
 .PHONY : CMakeFiles/WoodSpecies.dir/all
 
 # Include target in all.
@@ -514,7 +514,7 @@ clean: CMakeFiles/WoodSpecies.dir/clean
 CMakeFiles/Testing_qsort.dir/all:
 	$(MAKE) -f CMakeFiles\Testing_qsort.dir\build.make CMakeFiles/Testing_qsort.dir/depend
 	$(MAKE) -f CMakeFiles\Testing_qsort.dir\build.make CMakeFiles/Testing_qsort.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=27,28 "Built target Testing_qsort"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=29,30 "Built target Testing_qsort"
 .PHONY : CMakeFiles/Testing_qsort.dir/all
 
 # Include target in all.
@@ -551,7 +551,7 @@ clean: CMakeFiles/Testing_qsort.dir/clean
 CMakeFiles/TestingFunctionParameter.dir/all:
 	$(MAKE) -f CMakeFiles\TestingFunctionParameter.dir\build.make CMakeFiles/TestingFunctionParameter.dir/depend
 	$(MAKE) -f CMakeFiles\TestingFunctionParameter.dir\build.make CMakeFiles/TestingFunctionParameter.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=25,26 "Built target TestingFunctionParameter"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=27,28 "Built target TestingFunctionParameter"
 .PHONY : CMakeFiles/TestingFunctionParameter.dir/all
 
 # Include target in all.
@@ -588,7 +588,7 @@ clean: CMakeFiles/TestingFunctionParameter.dir/clean
 CMakeFiles/SpursRocks.dir/all:
 	$(MAKE) -f CMakeFiles\SpursRocks.dir\build.make CMakeFiles/SpursRocks.dir/depend
 	$(MAKE) -f CMakeFiles\SpursRocks.dir\build.make CMakeFiles/SpursRocks.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=23,24 "Built target SpursRocks"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=25,26 "Built target SpursRocks"
 .PHONY : CMakeFiles/SpursRocks.dir/all
 
 # Include target in all.
@@ -615,6 +615,43 @@ CMakeFiles/SpursRocks.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/SpursRocks.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/SapoDinamico.dir
+
+# All Build rule for target.
+CMakeFiles/SapoDinamico.dir/all:
+	$(MAKE) -f CMakeFiles\SapoDinamico.dir\build.make CMakeFiles/SapoDinamico.dir/depend
+	$(MAKE) -f CMakeFiles\SapoDinamico.dir\build.make CMakeFiles/SapoDinamico.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles --progress-num=23,24 "Built target SapoDinamico"
+.PHONY : CMakeFiles/SapoDinamico.dir/all
+
+# Include target in all.
+all: CMakeFiles/SapoDinamico.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/SapoDinamico.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles 2
+	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/SapoDinamico.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\carlo\Desktop\MarathonTranningCodes\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/SapoDinamico.dir/rule
+
+# Convenience name for target.
+SapoDinamico: CMakeFiles/SapoDinamico.dir/rule
+
+.PHONY : SapoDinamico
+
+# clean rule for target.
+CMakeFiles/SapoDinamico.dir/clean:
+	$(MAKE) -f CMakeFiles\SapoDinamico.dir\build.make CMakeFiles/SapoDinamico.dir/clean
+.PHONY : CMakeFiles/SapoDinamico.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/SapoDinamico.dir/clean
 
 .PHONY : clean
 
