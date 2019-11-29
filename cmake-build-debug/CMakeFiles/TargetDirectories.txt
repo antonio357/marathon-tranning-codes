@@ -10,6 +10,7 @@ C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/CMakeFiles/Camise
 C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/CMakeFiles/EuPossoAdivinharAEstruturaDeDados.dir
 C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/CMakeFiles/ListaTelefonicaEconomica.dir
 C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/CMakeFiles/WoodSpecies.dir
+C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/CMakeFiles/Testing_stoi.dir
 C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/CMakeFiles/Testing_qsort.dir
 C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/CMakeFiles/TestingFunctionParameter.dir
 C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/CMakeFiles/SpursRocks.dir

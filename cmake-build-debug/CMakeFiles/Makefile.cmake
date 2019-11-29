@@ -65,6 +65,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/EuPossoAdivinharAEstruturaDeDados.dir/DependInfo.cmake"
   "CMakeFiles/ListaTelefonicaEconomica.dir/DependInfo.cmake"
   "CMakeFiles/WoodSpecies.dir/DependInfo.cmake"
+  "CMakeFiles/Testing_stoi.dir/DependInfo.cmake"
   "CMakeFiles/Testing_qsort.dir/DependInfo.cmake"
   "CMakeFiles/TestingFunctionParameter.dir/DependInfo.cmake"
   "CMakeFiles/SpursRocks.dir/DependInfo.cmake"

@@ -1,152 +1,102 @@
-#include<iostream>
-#include<fstream>
+#include <iostream>
+#include <list>
 
 using namespace std;
 
-#define small 'S'
-#define big 'B'
-
-struct Pedra {
-    bool podePular;
-    char tipo;
-    int distMargenEsq;
+struct rock {
+    string type;
+    int dist_from_left_edge;
+    bool can_jump_on;
 };
 
-int pular(Pedra* pedraAtual, Pedra* pedraSeguinte) {
-    int tamanhoDoSalto = -1;
-    if (pedraSeguinte->podePular == true) {
-        tamanhoDoSalto = abs(pedraAtual->distMargenEsq - pedraSeguinte->distMargenEsq);
-        if (pedraSeguinte->tipo == small) pedraSeguinte->podePular = false;
+void printRocks(const list <rock>* rocks) {
+    for (auto i = rocks->begin(); i != rocks->end(); ++i) {
+        cout << "type = " << i->type << endl;
+        cout << "dist_from_left_edge = " << i->dist_from_left_edge << endl;
+        cout << "can_jump_on = " << i->can_jump_on << endl << endl;
     }
-    return tamanhoDoSalto;
 }
 
-int biggerSmallestJump(Pedra* pedras, int lengthPedras) {
-    // verificando se a entrada esta correta 
-    /*for (int i = 0; i < lengthPedras; i++) {
-        std::cout << pedras[i].distMargenEsq << endl;
-        std::cout << pedras[i].tipo << endl;
-        std::cout << pedras[i].podePular << endl << endl;
-    }*/
-    // verificando se a entrada esta correta
-    int bigger = 0;
-    int value;
-    // indo 
-    int indo = 0;
-    int ultimoIndex = lengthPedras - 1;
-    Pedra pedraAtual, pedraSeguinte;
-    while (indo < ultimoIndex) {
-        pedraAtual = pedras[indo];
-        pedraSeguinte = pedras[indo + 1];
-        /*if (pedraSeguinte.tipo == big) {
-            indo++;
-            value = pular(&pedraAtual, &pedras[indo]);
-        }
-        else if (pedraSeguinte.tipo == small) {
-            indo += 2;
-            value = pular(&pedraAtual, &pedras[indo]);
-        }*/
-        // new try
-        if (pedraAtual.tipo == big) {
-            indo++;
-            value = pular(&pedraAtual, &pedras[indo]);
-        }
-        else if (pedraAtual.tipo == small) {
-            if (pedraSeguinte.tipo == big) {
-                indo++;
-                value = pular(&pedraAtual, &pedras[indo]);
-            }
-            else if (pedraSeguinte.tipo == small) {
-                indo += 2;
-                value = pular(&pedraAtual, &pedras[indo]);
-            }
-        }
+void jump(list <rock>* rocks, list <rock>::iterator* actual_rock, list <rock>::iterator* next_rock, string operation) {
+    if (operation == "sum") {
+        while (*next_rock != rocks->end()) {
 
-        // new try
-        if (value < 0) std::cout << "deu merda" << endl;
-        else if (value > bigger) bigger = value;
-    }
-    // voltando
-    int voltando = ultimoIndex;
-    while (voltando > 0) {
-        pedraAtual = pedras[voltando];
-        pedraSeguinte = pedras[voltando - 1];
-        /*if (pedraSeguinte.tipo == big) {
-            voltando--;
-            value = pular(&pedraAtual, &pedras[voltando]);
-        }
-        else if (pedraSeguinte.tipo == small) {
-            if (pedraSeguinte.podePular == true) {
-                voltando -= 1;
-                value = pular(&pedraAtual, &pedras[voltando]);
+            if ((*next_rock)->type == "small") {
+                if ((*actual_rock)->type == "big") {
+                    break;
+                } else if ((*actual_rock)->type == "small") {
+                    (*next_rock)++;
+                    break;
+                }
+
+            } else if ((*next_rock)->type == "big") {
+                break;
             }
-            else {
-                voltando -= 2;
-                value = pular(&pedraAtual, &pedras[voltando]);
-            }
-        }*/
-        //new try
-        if (pedraSeguinte.podePular == true) {
-            voltando -= 1;
-            value = pular(&pedraAtual, &pedras[voltando]);
         }
-        else if (pedraSeguinte.podePular == false) {
-            voltando -= 2;
-            value = pular(&pedraAtual, &pedras[voltando]);
-        }
-        //new try
-        if (value < 0) std::cout << "deu merda" << endl;
-        else if (value > bigger) bigger = value;
+    } else if (operation == "subtraction") {
+
     }
-    return bigger;
+}
+
+int getBiggestJump(list <rock>* rocks) {
+    int biggest_jump = 0, jump_size;
+    auto actual_rock = rocks->begin();
+    auto next_rock = actual_rock;
+    next_rock++;
+
+    // going further
+    while (true) {
+        jump(rocks, &actual_rock, &next_rock, "sum");
+        jump_size = next_rock->dist_from_left_edge - actual_rock->dist_from_left_edge;
+        if (jump_size > biggest_jump) biggest_jump = jump_size;
+
+        actual_rock = next_rock;
+        if (actual_rock == rocks->end()) break;
+        else next_rock++;
+    }
+
+    // getting back
+    while (true) {
+        jump(rocks, &actual_rock, &next_rock, "subtraction");
+        jump_size = actual_rock->dist_from_left_edge - next_rock->dist_from_left_edge;
+        if (jump_size > biggest_jump) biggest_jump = jump_size;
+        if (next_rock == rocks->begin()) break;
+    }
+    return biggest_jump;
 }
 
 int main() {
-    // ofstream file__; // comentar antes de enviar
-    // file__.open("txtsFiles\\output"); // comentar antes de enviar
-    int nCasos, counterCasos = 0, resposta;
-    int nPedras, difMargens, numCounter, inputCounter;
-    string* input;
-    Pedra* pedras;
-    cin >> nCasos;
-    for (int i = 0; i < nCasos; i++) {
-        cin >> nPedras >> difMargens;
-        // lista para as pedras + lista das entradas para as pedras
-        pedras = new Pedra[nPedras + 2];
-        input = new string[nPedras];
-        // lista para as pedras + lista das entradas para as pedras
-        // setanda as margens
-        pedras[0].tipo = big;
-        pedras[0].podePular = true;
-        pedras[0].distMargenEsq = 0;
-        pedras[nPedras + 2 - 1].tipo = big;
-        pedras[nPedras + 2 - 1].podePular = true;
-        pedras[nPedras + 2 - 1].distMargenEsq = difMargens;
-        // setando as margens
-        // for para entradas
-        for (int j = 0; j < nPedras; j++) {
-            cin >> input[j];
-        }
-        // for para entradas
-        // for para setar todas as pedras das entradas
-        inputCounter = 0;
-        for (int j = 1; j < nPedras + 1; j++) {
-            pedras[j].tipo = input[inputCounter][0];
-            pedras[j].podePular = true;
-            char num[input[inputCounter].length() - 2];
-            numCounter = 0;
-            for (int z = 2; z < input[inputCounter].length(); z++) {
-                num[numCounter] = input[inputCounter][z];
-                numCounter++;
+    int nCases;
+    int nRocks;
+    int right_edge_dist;
+    string rock_info, rock_type, int_from_rock_info;
+    list <rock> rocks;
+
+    cin >> nCases;
+    for (int i = 1; i <= nCases; ++i) {
+        cin >> nRocks >> right_edge_dist;
+        rocks.clear();
+
+        rock lr = {"left_edge", 0, true};
+        rocks.push_back(lr);
+        for (int j = 0; j < nRocks; ++j) {
+            cin >> rock_info;
+
+            if (rock_info[0] == 'S') rock_type = "small";
+            else if (rock_info[0] == 'B') rock_type = "big";
+
+            int_from_rock_info.clear();
+            for (int k = 2; k < rock_info.length(); ++k) {
+                int_from_rock_info.push_back(rock_info[k]);
             }
-            pedras[j].distMargenEsq = atoi(num);
-            inputCounter++;
+
+            rock r = {rock_type, stoi(int_from_rock_info), true};
+            rocks.push_back(r);
         }
-        // for para setar todas as pedras das entradas
-        resposta = biggerSmallestJump(pedras, nPedras + 2);
-        std::cout << "Case " << ++counterCasos << ": " << resposta << endl;
-        // file__ << "Case " << counterCasos << ": " << resposta << endl; // comentar antes de enviar
+        rock rr = {"right_edge", right_edge_dist, true};
+        rocks.push_back(rr);
+
+        cout << "Case " << i << ": " << getBiggestJump(&rocks) << endl;
     }
-    // file__.close(); // comentar antes de enviar
     return 0;
 }

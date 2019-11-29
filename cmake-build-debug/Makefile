@@ -266,6 +266,19 @@ WoodSpecies/fast:
 .PHONY : WoodSpecies/fast
 
 #=============================================================================
+# Target rules for targets named Testing_stoi
+
+# Build rule for target.
+Testing_stoi: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 Testing_stoi
+.PHONY : Testing_stoi
+
+# fast build rule for target.
+Testing_stoi/fast:
+	$(MAKE) -f CMakeFiles\Testing_stoi.dir\build.make CMakeFiles/Testing_stoi.dir/build
+.PHONY : Testing_stoi/fast
+
+#=============================================================================
 # Target rules for targets named Testing_qsort
 
 # Build rule for target.
@@ -695,6 +708,33 @@ TestingBasicCodes/Testing_qsort.cpp.s:
 	$(MAKE) -f CMakeFiles\Testing_qsort.dir\build.make CMakeFiles/Testing_qsort.dir/TestingBasicCodes/Testing_qsort.cpp.s
 .PHONY : TestingBasicCodes/Testing_qsort.cpp.s
 
+TestingBasicCodes/Testing_stoi.obj: TestingBasicCodes/Testing_stoi.cpp.obj
+
+.PHONY : TestingBasicCodes/Testing_stoi.obj
+
+# target to build an object file
+TestingBasicCodes/Testing_stoi.cpp.obj:
+	$(MAKE) -f CMakeFiles\Testing_stoi.dir\build.make CMakeFiles/Testing_stoi.dir/TestingBasicCodes/Testing_stoi.cpp.obj
+.PHONY : TestingBasicCodes/Testing_stoi.cpp.obj
+
+TestingBasicCodes/Testing_stoi.i: TestingBasicCodes/Testing_stoi.cpp.i
+
+.PHONY : TestingBasicCodes/Testing_stoi.i
+
+# target to preprocess a source file
+TestingBasicCodes/Testing_stoi.cpp.i:
+	$(MAKE) -f CMakeFiles\Testing_stoi.dir\build.make CMakeFiles/Testing_stoi.dir/TestingBasicCodes/Testing_stoi.cpp.i
+.PHONY : TestingBasicCodes/Testing_stoi.cpp.i
+
+TestingBasicCodes/Testing_stoi.s: TestingBasicCodes/Testing_stoi.cpp.s
+
+.PHONY : TestingBasicCodes/Testing_stoi.s
+
+# target to generate assembly for a file
+TestingBasicCodes/Testing_stoi.cpp.s:
+	$(MAKE) -f CMakeFiles\Testing_stoi.dir\build.make CMakeFiles/Testing_stoi.dir/TestingBasicCodes/Testing_stoi.cpp.s
+.PHONY : TestingBasicCodes/Testing_stoi.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -767,6 +807,7 @@ help:
 	@echo ... EuPossoAdivinharAEstruturaDeDados
 	@echo ... ListaTelefonicaEconomica
 	@echo ... WoodSpecies
+	@echo ... Testing_stoi
 	@echo ... Testing_qsort
 	@echo ... TestingFunctionParameter
 	@echo ... SpursRocks
@@ -815,6 +856,9 @@ help:
 	@echo ... TestingBasicCodes/Testing_qsort.obj
 	@echo ... TestingBasicCodes/Testing_qsort.i
 	@echo ... TestingBasicCodes/Testing_qsort.s
+	@echo ... TestingBasicCodes/Testing_stoi.obj
+	@echo ... TestingBasicCodes/Testing_stoi.i
+	@echo ... TestingBasicCodes/Testing_stoi.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/carlo/Desktop/MarathonTranningCodes/RuanContest/ADHOCeAlg.Gulosos/SapoDinamico.cpp
+iostream
+-
+list
+-
+

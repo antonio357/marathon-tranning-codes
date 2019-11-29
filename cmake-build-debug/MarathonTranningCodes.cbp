@@ -521,6 +521,48 @@
 					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="Testing_stoi">
+				<Option output="C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/Testing_stoi.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/Makefile&quot;  VERBOSE=1 Testing_stoi"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Testing_stoi/fast">
+				<Option output="C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/Testing_stoi.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/Makefile&quot;  VERBOSE=1 Testing_stoi/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="Testing_qsort">
 				<Option output="C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/Testing_qsort.exe" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug"/>
@@ -751,6 +793,9 @@
 		</Unit>
 		<Unit filename="C:/Users/carlo/Desktop/MarathonTranningCodes/TestingBasicCodes/Testing_qsort.cpp">
 			<Option target="Testing_qsort"/>
+		</Unit>
+		<Unit filename="C:/Users/carlo/Desktop/MarathonTranningCodes/TestingBasicCodes/Testing_stoi.cpp">
+			<Option target="Testing_stoi"/>
 		</Unit>
 		<Unit filename="C:/Users/carlo/Desktop/MarathonTranningCodes/main.cpp">
 			<Option target="MarathonTranningCodes"/>
