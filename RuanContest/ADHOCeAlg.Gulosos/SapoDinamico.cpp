@@ -1,5 +1,5 @@
 #include <iostream>
-#include <list>
+#include <vector>
 
 using namespace std;
 
@@ -9,7 +9,7 @@ struct rock {
     bool can_jump_on;
 };
 
-void printRocks(const list <rock>* rocks) {
+void printRocks(const vector <rock>* rocks) {
     for (auto i = rocks->begin(); i != rocks->end(); ++i) {
         cout << "type = " << i->type << endl;
         cout << "dist_from_left_edge = " << i->dist_from_left_edge << endl;
@@ -17,51 +17,47 @@ void printRocks(const list <rock>* rocks) {
     }
 }
 
-void jump(list <rock>* rocks, list <rock>::iterator* actual_rock, list <rock>::iterator* next_rock, string operation) {
-    if (operation == "sum") {
-        while (*next_rock != rocks->end()) {
-
-            if ((*next_rock)->type == "small") {
-                if ((*actual_rock)->type == "big") {
-                    break;
-                } else if ((*actual_rock)->type == "small") {
-                    (*next_rock)++;
-                    break;
-                }
-
-            } else if ((*next_rock)->type == "big") {
-                break;
-            }
-        }
-    } else if (operation == "subtraction") {
-
-    }
-}
-
-int getBiggestJump(list <rock>* rocks) {
+int getBiggestJump(vector <rock>* rocks) {
     int biggest_jump = 0, jump_size;
     auto actual_rock = rocks->begin();
-    auto next_rock = actual_rock;
-    next_rock++;
+    auto next_rock = rocks->begin();
 
     // going further
     while (true) {
-        jump(rocks, &actual_rock, &next_rock, "sum");
-        jump_size = next_rock->dist_from_left_edge - actual_rock->dist_from_left_edge;
-        if (jump_size > biggest_jump) biggest_jump = jump_size;
+        if (actual_rock->type == "small") actual_rock->can_jump_on = false;
+        else if (actual_rock->type == "right_edge") break;
+        ++next_rock;
 
-        actual_rock = next_rock;
-        if (actual_rock == rocks->end()) break;
-        else next_rock++;
+        if (actual_rock->type == "small") {
+            if (next_rock->type == "small") {
+                ++next_rock;
+                jump_size = next_rock->dist_from_left_edge - actual_rock->dist_from_left_edge;
+                if (jump_size > biggest_jump) biggest_jump = jump_size;
+                actual_rock = next_rock;
+            } else {
+                jump_size = next_rock->dist_from_left_edge - actual_rock->dist_from_left_edge;
+                if (jump_size > biggest_jump) biggest_jump = jump_size;
+                actual_rock = next_rock;
+            }
+        } else {
+            jump_size = next_rock->dist_from_left_edge - actual_rock->dist_from_left_edge;
+            if (jump_size > biggest_jump) biggest_jump = jump_size;
+            actual_rock = next_rock;
+        }
     }
 
     // getting back
     while (true) {
-        jump(rocks, &actual_rock, &next_rock, "subtraction");
-        jump_size = actual_rock->dist_from_left_edge - next_rock->dist_from_left_edge;
-        if (jump_size > biggest_jump) biggest_jump = jump_size;
-        if (next_rock == rocks->begin()) break;
+        if (actual_rock->type == "left_edge") break;
+        --next_rock;
+
+        if (next_rock->can_jump_on) {
+            jump_size = actual_rock->dist_from_left_edge - next_rock->dist_from_left_edge;
+            if (jump_size > biggest_jump) biggest_jump = jump_size;
+            actual_rock = next_rock;
+        }
     }
+
     return biggest_jump;
 }
 
@@ -70,10 +66,10 @@ int main() {
     int nRocks;
     int right_edge_dist;
     string rock_info, rock_type, int_from_rock_info;
-    list <rock> rocks;
+    vector <rock> rocks;
 
     cin >> nCases;
-    for (int i = 1; i <= nCases; ++i) {
+    for (int i = 0; i < nCases; ++i) {
         cin >> nRocks >> right_edge_dist;
         rocks.clear();
 
@@ -96,7 +92,7 @@ int main() {
         rock rr = {"right_edge", right_edge_dist, true};
         rocks.push_back(rr);
 
-        cout << "Case " << i << ": " << getBiggestJump(&rocks) << endl;
+        cout << "Case " << (i + 1) << ": " << getBiggestJump(&rocks) << endl;
     }
     return 0;
 }
