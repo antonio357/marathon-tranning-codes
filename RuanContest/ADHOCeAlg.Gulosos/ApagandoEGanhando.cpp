@@ -1,46 +1,60 @@
-#include<iostream>
+#include <iostream>
+#include <queue>
+#include <algorithm>
 
 using namespace std;
 
-void takeBiggerNumb(int* numbers, int length, int quantToAdd, int* output) {
-    // printando o array que vai ser enviado pra takeBiggerNumb
-    // for (int i = 0; i < length; i++) cout << numbers[i] << ", "; cout << "endl " << endl;
-    int quantAdded = 0, outputCounter = 0, wantedNumb = 9;
-    while (quantAdded < quantToAdd) {
-        for (int i = length - 1; i > -1; i--) {
-            if (numbers[i] == wantedNumb) {
-                numbers[i] += 50;
-                quantAdded++;
-                if (quantAdded == quantToAdd) break;
-            }
-        }
-        wantedNumb--;
+struct digit {
+    char num;
+    int index;
+};
+
+bool operator<(const digit& d1, const digit& d2) {
+   if (d1.num == d2.num) return d1.index < d2.index;
+   else return d1.num < d2.num;
+}
+
+bool compareDigitByIndex(digit dgt1, digit dgt2) {
+    return dgt1.index < dgt2.index;
+}
+
+string biggestNumber(string inputNum, int finalLen) {
+    string result = "";
+
+    // digits sorted by size
+    priority_queue <digit> digits;
+    for (int i = 0; i < inputNum.length(); ++i) {
+        digit dgt = {inputNum[i], i};
+        digits.push(dgt);
     }
-    for (int i = 0; i < length; i++) {
-        if (numbers[i] >= 50) {
-            output[outputCounter] = numbers[i] - 50;
-            outputCounter++;
-        }
+
+    // digits sorted by index
+    digit arr[finalLen];
+    for (int j = 0; j < finalLen; ++j) {
+        arr[j] = digits.top();
+        digits.pop();
     }
+    int n = sizeof(arr) * finalLen/ sizeof(arr[0]);
+    sort(arr, arr+n, compareDigitByIndex);
+
+    // creating result
+    for (int k = 0; k < finalLen; ++k) {
+        result += arr[k].num;
+    }
+
+    return result;
 }
 
 int main() {
-    string input;
-    int* numbers;
-    int* output;
-    int quantNumbers, quantToRemove;
+    int numLen, delNum;
+    string inputNum;
+
     while (true) {
-        cin >> quantNumbers >> quantToRemove;
-        if (quantNumbers == 0) break;
-        
-        cin >> input;
-        numbers = new int[input.length()];
-        for (int i = 0; i < quantNumbers; i++) numbers[i] = input[i] - '0';
-        output = new int[quantNumbers - quantToRemove];
-        // printando o array que vai ser enviado pra takeBiggerNumb
-        // for (int i = 0; i < quantNumbers; i++) cout << numbers[i] << ", "; cout << "endl " << endl;
-        takeBiggerNumb(numbers, quantNumbers, quantNumbers - quantToRemove, output);
-        for (int i = 0; i < quantNumbers - quantToRemove; i++) cout << output[i]; cout << endl;
+        cin >> numLen >> delNum;
+        if (numLen == 0 and delNum == 0) break;
+
+        cin >> inputNum;
+        cout << "case = " << biggestNumber(inputNum, numLen - delNum) << endl;
     }
     return 0;
 }

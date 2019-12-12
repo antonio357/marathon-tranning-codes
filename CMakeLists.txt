@@ -20,3 +20,4 @@ add_executable(TestingFunctionParameter TestingBasicCodes/TestingFunctionParamet
 add_executable(SpursRocks RuanContest/EstruturadeDados/SpursRocks.cpp)
 add_executable(SapoDinamico RuanContest/ADHOCeAlg.Gulosos/SapoDinamico.cpp)
 add_executable(Testing_stoi TestingBasicCodes/Testing_stoi.cpp)
+add_executable(ApagandoEGanhando RuanContest/ADHOCeAlg.Gulosos/ApagandoEGanhando.cpp)

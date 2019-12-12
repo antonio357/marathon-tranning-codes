@@ -70,4 +70,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/TestingFunctionParameter.dir/DependInfo.cmake"
   "CMakeFiles/SpursRocks.dir/DependInfo.cmake"
   "CMakeFiles/SapoDinamico.dir/DependInfo.cmake"
+  "CMakeFiles/ApagandoEGanhando.dir/DependInfo.cmake"
   )

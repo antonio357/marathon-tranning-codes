@@ -330,6 +330,46 @@ SapoDinamico/fast:
 	$(MAKE) -f CMakeFiles\SapoDinamico.dir\build.make CMakeFiles/SapoDinamico.dir/build
 .PHONY : SapoDinamico/fast
 
+#=============================================================================
+# Target rules for targets named ApagandoEGanhando
+
+# Build rule for target.
+ApagandoEGanhando: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 ApagandoEGanhando
+.PHONY : ApagandoEGanhando
+
+# fast build rule for target.
+ApagandoEGanhando/fast:
+	$(MAKE) -f CMakeFiles\ApagandoEGanhando.dir\build.make CMakeFiles/ApagandoEGanhando.dir/build
+.PHONY : ApagandoEGanhando/fast
+
+RuanContest/ADHOCeAlg.Gulosos/ApagandoEGanhando.obj: RuanContest/ADHOCeAlg.Gulosos/ApagandoEGanhando.cpp.obj
+
+.PHONY : RuanContest/ADHOCeAlg.Gulosos/ApagandoEGanhando.obj
+
+# target to build an object file
+RuanContest/ADHOCeAlg.Gulosos/ApagandoEGanhando.cpp.obj:
+	$(MAKE) -f CMakeFiles\ApagandoEGanhando.dir\build.make CMakeFiles/ApagandoEGanhando.dir/RuanContest/ADHOCeAlg.Gulosos/ApagandoEGanhando.cpp.obj
+.PHONY : RuanContest/ADHOCeAlg.Gulosos/ApagandoEGanhando.cpp.obj
+
+RuanContest/ADHOCeAlg.Gulosos/ApagandoEGanhando.i: RuanContest/ADHOCeAlg.Gulosos/ApagandoEGanhando.cpp.i
+
+.PHONY : RuanContest/ADHOCeAlg.Gulosos/ApagandoEGanhando.i
+
+# target to preprocess a source file
+RuanContest/ADHOCeAlg.Gulosos/ApagandoEGanhando.cpp.i:
+	$(MAKE) -f CMakeFiles\ApagandoEGanhando.dir\build.make CMakeFiles/ApagandoEGanhando.dir/RuanContest/ADHOCeAlg.Gulosos/ApagandoEGanhando.cpp.i
+.PHONY : RuanContest/ADHOCeAlg.Gulosos/ApagandoEGanhando.cpp.i
+
+RuanContest/ADHOCeAlg.Gulosos/ApagandoEGanhando.s: RuanContest/ADHOCeAlg.Gulosos/ApagandoEGanhando.cpp.s
+
+.PHONY : RuanContest/ADHOCeAlg.Gulosos/ApagandoEGanhando.s
+
+# target to generate assembly for a file
+RuanContest/ADHOCeAlg.Gulosos/ApagandoEGanhando.cpp.s:
+	$(MAKE) -f CMakeFiles\ApagandoEGanhando.dir\build.make CMakeFiles/ApagandoEGanhando.dir/RuanContest/ADHOCeAlg.Gulosos/ApagandoEGanhando.cpp.s
+.PHONY : RuanContest/ADHOCeAlg.Gulosos/ApagandoEGanhando.cpp.s
+
 RuanContest/ADHOCeAlg.Gulosos/EmBraille.obj: RuanContest/ADHOCeAlg.Gulosos/EmBraille.cpp.obj
 
 .PHONY : RuanContest/ADHOCeAlg.Gulosos/EmBraille.obj
@@ -812,8 +852,12 @@ help:
 	@echo ... TestingFunctionParameter
 	@echo ... SpursRocks
 	@echo ... SapoDinamico
+	@echo ... ApagandoEGanhando
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... RuanContest/ADHOCeAlg.Gulosos/ApagandoEGanhando.obj
+	@echo ... RuanContest/ADHOCeAlg.Gulosos/ApagandoEGanhando.i
+	@echo ... RuanContest/ADHOCeAlg.Gulosos/ApagandoEGanhando.s
 	@echo ... RuanContest/ADHOCeAlg.Gulosos/EmBraille.obj
 	@echo ... RuanContest/ADHOCeAlg.Gulosos/EmBraille.i
 	@echo ... RuanContest/ADHOCeAlg.Gulosos/EmBraille.s
