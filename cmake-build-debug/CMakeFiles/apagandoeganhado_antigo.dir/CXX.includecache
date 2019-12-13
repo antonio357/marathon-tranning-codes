@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/carlo/Desktop/MarathonTranningCodes/RuanContest/ADHOCeAlg.Gulosos/apagandoeganhando_antigo.cpp
+iostream
+-
+stack
+-
+

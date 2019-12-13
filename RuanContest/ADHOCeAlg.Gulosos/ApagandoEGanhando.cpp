@@ -1,43 +1,46 @@
 #include <iostream>
 
+#define end '\000'
 using namespace std;
 
-int getBiggestDigitIndex(string* inputNum, int startIndex, int endIndex) {
-    char biggest = (*inputNum)[startIndex];
+int getBiggestDigitIndex(char inputNum[], int startIndex, int endIndex) {
+    char biggest = inputNum[startIndex];
     int index = startIndex;
 
     for (int i = startIndex + 1; i < endIndex; ++i) {
-        if ((*inputNum)[i] > biggest) {
-            biggest = (*inputNum)[i];
+        if (inputNum[i] > biggest) {
+            biggest = inputNum[i];
             index = i;
         }
     }
     return index;
 }
 
-string biggestNumber(string* inputNum, int finalLen) {
-    string result = "";
-    int startIndex = 0, index;
+void biggestNumber(char inputNum[], int numLen, char result[], int finalLen) {
+    int startIndex = 0, index, counter = -1;
 
     for (int i = finalLen; i > 0; --i) {
-        index = getBiggestDigitIndex(inputNum, startIndex, inputNum->length() - i + 1);
-        result += (*inputNum)[index];
+        index = getBiggestDigitIndex(inputNum, startIndex, numLen - i + 1);
+        result[++counter] = inputNum[index];
         startIndex = index + 1;
     }
-
-    return result;
+    result[++counter] = end;
 }
 
 int main() {
     int numLen, delNum;
-    string inputNum;
 
     while (true) {
         cin >> numLen >> delNum;
         if (numLen == 0 and delNum == 0) break;
+        int finalLen = numLen - delNum;
+
+        char inputNum[numLen];
+        char outputNum[finalLen + 1];
 
         cin >> inputNum;
-        cout << biggestNumber(&inputNum, numLen - delNum) << endl;
+        biggestNumber(inputNum, numLen, outputNum, finalLen);
+        cout << outputNum << endl;
     }
     return 0;
 }
