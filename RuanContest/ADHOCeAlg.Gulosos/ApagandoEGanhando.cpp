@@ -35,10 +35,11 @@ int main() {
         if (numLen == 0 and delNum == 0) break;
         int finalLen = numLen - delNum;
 
-        char inputNum[numLen];
+        char inputNum[numLen + 1];
         char outputNum[finalLen + 1];
 
-        cin >> inputNum;
+        //cin >> inputNum;
+        scanf("%s", inputNum);
         biggestNumber(inputNum, numLen, outputNum, finalLen);
         cout << outputNum << endl;
     }
