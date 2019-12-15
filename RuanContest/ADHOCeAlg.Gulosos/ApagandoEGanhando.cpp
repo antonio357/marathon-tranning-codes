@@ -1,30 +1,44 @@
 #include <iostream>
+#include <list>
 
-#define end '\000'
 using namespace std;
 
-int getBiggestDigitIndex(char inputNum[], int startIndex, int endIndex) {
-    char biggest = inputNum[startIndex];
-    int index = startIndex;
+typedef struct {
+    char num;
+    int index;
+} digit;
 
-    for (int i = startIndex + 1; i < endIndex; ++i) {
-        if (inputNum[i] > biggest) {
-            biggest = inputNum[i];
-            index = i;
-        }
-    }
-    return index;
+bool operator<(const digit& d1, const digit& d2){
+    if (d1.num == d2.num) return d1.index < d2.index;
+    return d1.num > d2.num;
 }
 
-void biggestNumber(char inputNum[], int numLen, char result[], int finalLen) {
-    int startIndex = 0, index, counter = -1;
+bool operator==(const digit& d1, const digit& d2){
+    return d1.num == d2.num and d1.index == d2.index;
+}
 
-    for (int i = finalLen; i > 0; --i) {
-        index = getBiggestDigitIndex(inputNum, startIndex, numLen - i + 1);
-        result[++counter] = inputNum[index];
-        startIndex = index + 1;
+string biggestNumber(char inputNum[], int len, char outputNum[], int finalLen) {
+
+    list <digit> digits;
+    for (int i = 0; i < len; ++i) {
+        digit dgt = {inputNum[i], i};
+        digits.push_back(dgt);
     }
-    result[++counter] = end;
+    digits.sort();
+
+    int sill = len - finalLen;
+    int previousIndex = -1;
+    for (int j = 0; j < finalLen; ++j) {
+        for (auto it = digits.begin(); it != digits.end(); ++it) {
+            if (it->index <= sill and it->index > previousIndex) {
+                outputNum[j] = it->num;
+                sill++;
+                digits.remove(*it);
+                previousIndex = it->index;
+                break;
+            }
+        }
+    }
 }
 
 int main() {
@@ -37,11 +51,9 @@ int main() {
 
         char inputNum[numLen + 1];
         char outputNum[finalLen + 1];
-
-        //cin >> inputNum;
-        scanf("%s", inputNum);
+        scanf("%s", &inputNum);
         biggestNumber(inputNum, numLen, outputNum, finalLen);
-        cout << outputNum << endl;
+        printf("%s\n", outputNum);
     }
     return 0;
 }
