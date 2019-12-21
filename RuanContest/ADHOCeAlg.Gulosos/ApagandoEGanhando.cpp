@@ -13,54 +13,45 @@ bool operator<(const digit& d1, const digit& d2){
 }
 
 bool operator==(const digit& d1, const digit& d2){
-    return d1.num == d2.num and d1.index == d2.index;
+    return d1.num == d2.num;
 }
 
+string biggestNumber(string inputNum, int finalLen) {
+    int removeCounter = 0;
+    bool firstAdd = true;
+    stack <digit> selector;
 
-class biggestNumber {
-    private:
-        int finalLen;
-        int removeCounter;
-        bool firstAdd;
-        string inputNum;
-        stack <digit> selector;
-
-        void process() {
-            for (int i = 0; i < inputNum.length(); i++) {
-                digit dgt = {inputNum[i], i};
-                if (firstAdd) {
-                    this->firstAdd = false;
-                    selector.push(dgt);
-                } else {
-                    while (selector.top() < dgt and removeCounter < inputNum.length() - finalLen) {
-                        removeCounter++;
-                        selector.pop();
-                    }
-                    selector.push(dgt);
-                }
-            }
-        }
-
-        void print() {
-            cout << "here" << endl;
-            char outputNum[finalLen + 1];
-            for (int i = finalLen - 1; i > -1; --i) {
-                outputNum[i] = selector.top().num;
+    for (int i = 0; i < inputNum.length(); i++) {
+        digit dgt = {inputNum[i], i};
+        if (firstAdd) {
+            firstAdd = false;
+            selector.push(dgt);
+        } else {
+            while (selector.size() > 0 and selector.top() < dgt and removeCounter < inputNum.length() - finalLen) {
                 selector.pop();
-            } outputNum [finalLen] = '\000';
-            cout << outputNum << endl;
+                removeCounter++;
+            }
+            if (selector.size() > 0 and selector.top() == dgt and selector.size() == finalLen) {
+                selector.pop();
+                removeCounter++;
+            }
+            selector.push(dgt);
         }
-
-    public:
-        biggestNumber(string inputNum, int finalLen) {
-        this->inputNum = inputNum;
-        this->finalLen = finalLen;
-        this->firstAdd = true;
-        this->removeCounter = 0;
-        process();
-        print();
     }
-};
+
+    char tempOutputNum[finalLen];
+    for (int i = finalLen - 1; i > -1; i--) {
+        tempOutputNum[i] = selector.top().num;
+        selector.pop();
+    }
+
+    string outputNum;
+    for (int i = 0; i < finalLen; ++i) {
+        outputNum += tempOutputNum[i];
+    }
+
+    return outputNum;
+}
 
 int main() {
     int numLen, delNum;
@@ -72,7 +63,7 @@ int main() {
         int finalLen = numLen - delNum;
 
         cin >> inputNum;
-        biggestNumber(inputNum, finalLen);
+        cout << biggestNumber(inputNum, finalLen) << endl;
     }
     return 0;
 }
