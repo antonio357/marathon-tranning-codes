@@ -16,27 +16,32 @@ bool operator==(const digit& d1, const digit& d2){
     return d1.num == d2.num;
 }
 
-string biggestNumber(string inputNum, int finalLen) {
-    int removeCounter = 0;
-    bool firstAdd = true;
+bool operator<=(const digit& d1, const digit& d2){
+    return (d1.num == d2.num or d1.num < d2.num);
+}
+
+string biggestNumber(string inputNum, int finalLen, int delNum) {
     stack <digit> selector;
+    int delCounter = 0;
 
     for (int i = 0; i < inputNum.length(); i++) {
         digit dgt = {inputNum[i], i};
-        if (firstAdd) {
-            firstAdd = false;
-            selector.push(dgt);
-        } else {
-            while (selector.size() > 0 and selector.top() < dgt and removeCounter < inputNum.length() - finalLen) {
-                selector.pop();
-                removeCounter++;
-            }
-            if (selector.size() > 0 and selector.top() == dgt and selector.size() == finalLen) {
-                selector.pop();
-                removeCounter++;
-            }
-            selector.push(dgt);
+//        cout << "dgt in play = " << dgt.num << endl;
+        while (selector.size() > 0 and selector.top() < dgt and delCounter < delNum) {
+//            if (selector.top() == dgt) {
+//                selector.pop();
+//                delCounter++;
+//                cout << "pop first by else" << endl;
+//            }
+            selector.pop();
+            delCounter++;
+//            cout << "pop by while" << endl;
         }
+        if (selector.size() < finalLen) {
+            selector.push(dgt);
+//            cout << "push by last if" << endl;
+        } else delCounter++;
+//        cout << "end of dgt in play" << endl;
     }
 
     char tempOutputNum[finalLen];
@@ -63,7 +68,7 @@ int main() {
         int finalLen = numLen - delNum;
 
         cin >> inputNum;
-        cout << biggestNumber(inputNum, finalLen) << endl;
+        cout << biggestNumber(inputNum, finalLen, delNum) << endl;
     }
     return 0;
 }
