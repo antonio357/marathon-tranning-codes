@@ -343,19 +343,6 @@ ApagandoEGanhando/fast:
 	$(MAKE) -f CMakeFiles\ApagandoEGanhando.dir\build.make CMakeFiles/ApagandoEGanhando.dir/build
 .PHONY : ApagandoEGanhando/fast
 
-#=============================================================================
-# Target rules for targets named apagandoeganhado_antigo
-
-# Build rule for target.
-apagandoeganhado_antigo: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 apagandoeganhado_antigo
-.PHONY : apagandoeganhado_antigo
-
-# fast build rule for target.
-apagandoeganhado_antigo/fast:
-	$(MAKE) -f CMakeFiles\apagandoeganhado_antigo.dir\build.make CMakeFiles/apagandoeganhado_antigo.dir/build
-.PHONY : apagandoeganhado_antigo/fast
-
 RuanContest/ADHOCeAlg.Gulosos/ApagandoEGanhando.obj: RuanContest/ADHOCeAlg.Gulosos/ApagandoEGanhando.cpp.obj
 
 .PHONY : RuanContest/ADHOCeAlg.Gulosos/ApagandoEGanhando.obj
@@ -436,33 +423,6 @@ RuanContest/ADHOCeAlg.Gulosos/SapoDinamico.s: RuanContest/ADHOCeAlg.Gulosos/Sapo
 RuanContest/ADHOCeAlg.Gulosos/SapoDinamico.cpp.s:
 	$(MAKE) -f CMakeFiles\SapoDinamico.dir\build.make CMakeFiles/SapoDinamico.dir/RuanContest/ADHOCeAlg.Gulosos/SapoDinamico.cpp.s
 .PHONY : RuanContest/ADHOCeAlg.Gulosos/SapoDinamico.cpp.s
-
-RuanContest/ADHOCeAlg.Gulosos/apagandoeganhando_antigo.obj: RuanContest/ADHOCeAlg.Gulosos/apagandoeganhando_antigo.cpp.obj
-
-.PHONY : RuanContest/ADHOCeAlg.Gulosos/apagandoeganhando_antigo.obj
-
-# target to build an object file
-RuanContest/ADHOCeAlg.Gulosos/apagandoeganhando_antigo.cpp.obj:
-	$(MAKE) -f CMakeFiles\apagandoeganhado_antigo.dir\build.make CMakeFiles/apagandoeganhado_antigo.dir/RuanContest/ADHOCeAlg.Gulosos/apagandoeganhando_antigo.cpp.obj
-.PHONY : RuanContest/ADHOCeAlg.Gulosos/apagandoeganhando_antigo.cpp.obj
-
-RuanContest/ADHOCeAlg.Gulosos/apagandoeganhando_antigo.i: RuanContest/ADHOCeAlg.Gulosos/apagandoeganhando_antigo.cpp.i
-
-.PHONY : RuanContest/ADHOCeAlg.Gulosos/apagandoeganhando_antigo.i
-
-# target to preprocess a source file
-RuanContest/ADHOCeAlg.Gulosos/apagandoeganhando_antigo.cpp.i:
-	$(MAKE) -f CMakeFiles\apagandoeganhado_antigo.dir\build.make CMakeFiles/apagandoeganhado_antigo.dir/RuanContest/ADHOCeAlg.Gulosos/apagandoeganhando_antigo.cpp.i
-.PHONY : RuanContest/ADHOCeAlg.Gulosos/apagandoeganhando_antigo.cpp.i
-
-RuanContest/ADHOCeAlg.Gulosos/apagandoeganhando_antigo.s: RuanContest/ADHOCeAlg.Gulosos/apagandoeganhando_antigo.cpp.s
-
-.PHONY : RuanContest/ADHOCeAlg.Gulosos/apagandoeganhando_antigo.s
-
-# target to generate assembly for a file
-RuanContest/ADHOCeAlg.Gulosos/apagandoeganhando_antigo.cpp.s:
-	$(MAKE) -f CMakeFiles\apagandoeganhado_antigo.dir\build.make CMakeFiles/apagandoeganhado_antigo.dir/RuanContest/ADHOCeAlg.Gulosos/apagandoeganhando_antigo.cpp.s
-.PHONY : RuanContest/ADHOCeAlg.Gulosos/apagandoeganhando_antigo.cpp.s
 
 RuanContest/EstruturadeDados/BalancoDeParentesis.obj: RuanContest/EstruturadeDados/BalancoDeParentesis.cpp.obj
 
@@ -893,7 +853,6 @@ help:
 	@echo ... SpursRocks
 	@echo ... SapoDinamico
 	@echo ... ApagandoEGanhando
-	@echo ... apagandoeganhado_antigo
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... RuanContest/ADHOCeAlg.Gulosos/ApagandoEGanhando.obj
@@ -905,9 +864,6 @@ help:
 	@echo ... RuanContest/ADHOCeAlg.Gulosos/SapoDinamico.obj
 	@echo ... RuanContest/ADHOCeAlg.Gulosos/SapoDinamico.i
 	@echo ... RuanContest/ADHOCeAlg.Gulosos/SapoDinamico.s
-	@echo ... RuanContest/ADHOCeAlg.Gulosos/apagandoeganhando_antigo.obj
-	@echo ... RuanContest/ADHOCeAlg.Gulosos/apagandoeganhando_antigo.i
-	@echo ... RuanContest/ADHOCeAlg.Gulosos/apagandoeganhando_antigo.s
 	@echo ... RuanContest/EstruturadeDados/BalancoDeParentesis.obj
 	@echo ... RuanContest/EstruturadeDados/BalancoDeParentesis.i
 	@echo ... RuanContest/EstruturadeDados/BalancoDeParentesis.s

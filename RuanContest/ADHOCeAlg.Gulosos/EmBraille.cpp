@@ -1,97 +1,118 @@
 #include <iostream>
-#include <string>
+#include <map>
 
 using namespace std;
+#define toBraille 'S'
+#define toNum 'B'
+#define nLayers 3
+#define nColumns 2
+#define nDigits 10
+#define zeroInChar 48
 
-char zeroZero[8] = {'1','2','3','4','5','6','7','8'};
-char zeroOne[6] = {'3','4','6','7','9','0'};
-char oneZero[6] = {'2','6','7','8','9','0'};
-char oneOne[5] = {'4','5','7','8','0'};
+typedef struct {
+    char matrix[nLayers][nColumns];
+    char digit;
+} brailleScript;
 
-bool itIs(char* numbers, int lenght,  int numb) {
-    for (int i = 0; i < lenght; i++) {
-        if (numbers[i] == numb) return true;
-    }
-    return false;
-}
-
-void adjust(int number, int seg, char* pr) {
-    if (seg == 0) {
-        if (itIs(zeroZero, 8, number) == true) {
-            pr[0] = '*';
-        }
-        if (itIs(zeroOne, 6, number) == true) {
-            pr[1] = '*';
+bool operator==(const brailleScript &bs1, const brailleScript &bs2) {
+    for (int i = 0; i < nLayers; ++i) {
+        for (int j = 0; j < nColumns; ++j) {
+            if (bs1.matrix[i][j] != bs2.matrix[i][j]) return false;
         }
     }
-    else if (seg == 1) {
-        if (itIs(oneZero, 6, number) == true) {
-            pr[0] = '*';
-        }
-        if (itIs(oneOne, 5, number) == true) {
-            pr[1] = '*';
-        }
-    }
+    return true;
 }
 
-void toBraille(string input) { // char* numbers, int lenght
-    char pr[2] = {'.', '.'};
-    int lenght = input.lenght();
-    for (int seg = 0; seg < 3; seg++) {
-        for (int numb = 0; numb < lenght; numb++) {
-            pr[0] = '.'; pr[1] = '.';
-            adjust(input[numb], seg, pr);
-            if (numb == (lenght - 1)) printf("%c%c\n", pr[0], pr[1]);
-            else printf("%c%c ", pr[0], pr[1]);
+brailleScript zero = {{'.', '*', '*', '*', '.', '.'}, '0'};
+brailleScript one = {{'*', '.', '.', '.', '.', '.'}, '1'};
+brailleScript two = {{'*', '.', '*', '.', '.', '.'}, '2'};
+brailleScript tree = {{'*', '*', '.', '.', '.', '.'}, '3'};
+brailleScript four = {{'*', '*', '.', '*', '.', '.'}, '4'};
+brailleScript five = {{'*', '.', '.', '*', '.', '.'}, '5'};
+brailleScript six = {{'*', '*', '*', '.', '.', '.'}, '6'};
+brailleScript seven = {{'*', '*', '*', '*', '.', '.'}, '7'};
+brailleScript eight = {{'*', '.', '*', '*', '.', '.'}, '8'};
+brailleScript nine = {{'.', '*', '*', '.', '.', '.'}, '9'};
+
+brailleScript brailleScripts[nDigits] = {zero, one, two, tree, four, five, six, seven, eight, nine};
+
+class Braille {
+    private:
+        brailleScript brailleScript1;
+        int lineCounter;
+
+        void setNum() {
+            if (lineCounter == nLayers) {
+                for (int i = 0; i < nDigits; ++i) {
+                    if (brailleScripts[i] == brailleScript1) brailleScript1.digit = brailleScripts[i].digit;
+                }
+            }
         }
-    }
-}
 
-int number(char** matrix, int column) {
-    char actual = matrix[0][column];
-    char right = matrix[0][column + 1];
-    char down = matrix[1][column];
-    char downRight = matrix[1][column + 1];
-    cout << actual << right << down << downRight << endl;
-    if (actual == '.' && down == '*' && downRight == '*' && right == '*') return 0;
-    else if (actual == '*' && down == '.' && downRight == '.' && right == '.') return 1;
-    else if (actual == '*' && down == '*' && downRight == '.' && right == '.') return 2;
-    else if (actual == '*' && down == '.' && downRight == '.' && right == '*') return 3;
-    else if (actual == '*' && down == '.' && downRight == '*' && right == '*') return 4;
-    else if (actual == '*' && down == '.' && downRight == '*' && right == '.') return 5;
-    else if (actual == '*' && down == '*' && downRight == '.' && right == '*') return 6;
-    else if (actual == '*' && down == '*' && downRight == '*' && right == '*') return 7;
-    else if (actual == '*' && down == '*' && downRight == '*' && right == '.') return 8;
-    else if (actual == '.' && down == '*' && downRight == '.' && right == '*') return 9;
-    return -1;
-}
+    public:
+        Braille() {
+            lineCounter = 0;
+            brailleScript1.digit = '\0';
+        }
 
-void toNumbers(char** braille, int lenght) {
-    for (int column = 0; column < lenght*2; column += 2) { 
-        printf("%d", number(braille, column));
-    } 
-    printf("\n");
-}
+        void setMatrix (string input) {
+            if (lineCounter < nLayers) {
+                for (int i = 0; i < nColumns; ++i) {
+                    brailleScript1.matrix[lineCounter][i] = input[i];
+                }
+                lineCounter++;
+            }
+        }
+
+        void printNum() {
+            if (brailleScript1.digit == '\0') {
+                setNum();
+            }
+            cout << brailleScript1.digit;
+        }
+};
 
 int main() {
-    int n;
-    char ch;
+    int len;
+    char translation;
     string input;
-    string input1;
-    string input2;
+
     while (true) {
-        cin >> n;
-        if (n == 0) break;
-        cin >> ch;
-        if (ch == 'S') {
-            getline(cin, input);
-            toBraille(input);
-        }
-        else if (ch == 'B') {
-            getline(cin, input);
-            getline(cin, input1);
-            getline(cin, input2);
+        cin >> len;
+        if (len == 0) break;
+
+        cin >> translation;
+        if (translation == toBraille) {
+            cin >> input;
+
+            for (int l = 0; l < nLayers; ++l) {
+                for (int d = 0; d < len; ++d) {
+                    for (int c = 0; c < nColumns; ++c) {
+                        cout << brailleScripts[input[d] - zeroInChar].matrix[l][c];
+                    }
+                    if (d == len - 1) cout << endl;
+                    else cout << ' ';
+                }
+            }
+        } else if (translation == toNum) {
+            Braille brailles[len];
+            for (int k = 0; k < len; ++k) {
+                Braille braille;
+                brailles[k] = braille;
+            }
+
+            for (int i = 0; i < nLayers; ++i) {
+                for (int j = 0; j < len; ++j) {
+                    cin >> input;
+                    brailles[j].setMatrix(input);
+                }
+            }
+
+            for (int l = 0; l < len; ++l) {
+                brailles[l].printNum();
+            } cout << endl;
         }
     }
+
     return 0;
 }

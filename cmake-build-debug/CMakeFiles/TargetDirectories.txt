@@ -16,6 +16,5 @@ C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/CMakeFiles/Testin
 C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/CMakeFiles/SpursRocks.dir
 C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/CMakeFiles/SapoDinamico.dir
 C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/CMakeFiles/ApagandoEGanhando.dir
-C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/CMakeFiles/apagandoeganhado_antigo.dir
 C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/CMakeFiles/edit_cache.dir
 C:/Users/carlo/Desktop/MarathonTranningCodes/cmake-build-debug/CMakeFiles/rebuild_cache.dir
