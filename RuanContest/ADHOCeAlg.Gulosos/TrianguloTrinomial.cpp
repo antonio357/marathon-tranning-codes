@@ -1,22 +1,23 @@
 #include <iostream>
-#include <math.h>
 
 using namespace std; 
+#define sill 2147483647
 
-void convertPrint(unsigned long long int * result , const unsigned long long int * cst ) {
-    if (*result > *cst) {
-        *result = (*result / *cst) + (*result % *cst) - 1;
-    }
-    cout << *result << endl;
-}
+unsigned long long int power(int x, unsigned int y) { 
+    unsigned long long int temp; 
+    if( y == 0) 
+        return 1; 
+    temp = power(x, y/2); 
+    temp %= sill;
+    if (y%2 == 0) 
+        return (temp*temp)%sill; 
+    else
+        return (x*temp*temp)%sill; 
+}  
 
 int main() {
-    unsigned long int inputNum;
-    unsigned long long int result;
-    unsigned long long int cst = 2147483647;
+    int inputNum;
     cin >> inputNum;
-
-    result = pow(3, inputNum);
-    convertPrint(&result, &cst);
+    cout << power(3, inputNum) << endl;
     return 0;
 }
