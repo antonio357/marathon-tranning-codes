@@ -1,0 +1,27 @@
+Galho 1:
+Numero total de enfeites: 1017
+
+Galho 2:
+Numero total de enfeites: 934
+
+Galho 3:
+Numero total de enfeites: 293
+
+Galho 4:
+Numero total de enfeites: 299
+
+Galho 5:
+Numero total de enfeites: 299
+
+Galho 6:
+Numero total de enfeites: 298
+
+Galho 7:
+Numero total de enfeites: 804
+
+Galho 8:
+Numero total de enfeites: 981
+
+Galho 9:
+Numero total de enfeites: 266
+
